@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:tuc/constants/color.dart';
 import 'dart:math';
 
-import 'package:tuc/screens/dashboard.dart';
+import 'package:tuc/screens/index.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
@@ -93,8 +93,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     Container(
                       child: ProgressButton(
                         onNext: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => Dashboard()));
+                          Navigator.of(context).push(
+                              MaterialPageRoute(builder: (context) => Index()));
                         },
                       ),
                     )
@@ -159,7 +159,7 @@ class Slide extends StatelessWidget {
           GestureDetector(
             onTap: () {
               Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => Dashboard()));
+                  .push(MaterialPageRoute(builder: (context) => Index()));
             },
             child: Text(
               "Skip",
