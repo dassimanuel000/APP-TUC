@@ -101,7 +101,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         height: 120,
                         width: 120,
                         decoration: BoxDecoration(
-                          color: Color(0xDD01549F),
+                          color: Colors.white,
                           shape: BoxShape.circle,
                           boxShadow: [
                             BoxShadow(
@@ -112,8 +112,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             ),
                           ],
                           image: DecorationImage(
-                            image: ExactAssetImage(
-                                'assets/images/features-icon-1.png'),
+                            image: ExactAssetImage('assets/images/logo.png'),
                             fit: BoxFit.cover,
                           ),
                         ),

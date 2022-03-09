@@ -1,11 +1,14 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:native_notify/native_notify.dart';
 import 'package:provider/provider.dart';
 import 'package:tuc/constants/color.dart';
 import 'package:tuc/screens/home_screen.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  NativeNotify.initialize(183, 'NbqDezLGWH7bz6vXPpVaxZ');
   runApp(MyApp());
 }
 
