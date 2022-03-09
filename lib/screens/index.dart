@@ -1,76 +1,73 @@
-// ignore_for_file: prefer_const_constructors, unnecessary_new
+// ignore_for_file: unnecessary_new
 
+import 'package:bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:tuc/screens/dashboard.dart';
-import 'package:tuc/screens/home_screen.dart';
 import 'package:tuc/screens/listJob.dart';
 import 'package:tuc/screens/profile.dart';
 
-class Index extends StatefulWidget {
-  const Index({Key? key}) : super(key: key);
+class RootPage extends StatefulWidget {
+  const RootPage({Key? key}) : super(key: key);
 
   @override
-  _IndexState createState() => _IndexState();
+  _RootPageState createState() => _RootPageState();
 }
 
-class _IndexState extends State<Index> {
-  var _currentIndex = 0;
-  void onTabTapped(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
-  }
+class _RootPageState extends State<RootPage> {
+  int _currentIndex = 0;
 
-  final List<Widget> _children = [
-    new Dashboard(),
-    new ListJob(),
-    new ProfilePage()
-  ];
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Trouver un Candidat',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: Scaffold(
-        bottomNavigationBar: SalomonBottomBar(
-          currentIndex: _currentIndex,
-          onTap: (i) => setState(() => _children[_currentIndex]),
-          items: [
-            /// Home
-            SalomonBottomBarItem(
-              icon: Icon(Icons.home),
-              title: Text("Home"),
-              selectedColor: Colors.purple,
-            ),
-
-            /// Likes
-            SalomonBottomBarItem(
-              icon: Icon(Icons.favorite_border),
-              title: Text("Likes"),
-              selectedColor: Colors.pink,
-            ),
-
-            /// Search
-            SalomonBottomBarItem(
-              icon: Icon(Icons.search),
-              title: Text("Search"),
-              selectedColor: Colors.orange,
-            ),
-
-            /// Profile
-            SalomonBottomBarItem(
-              icon: Icon(Icons.person),
-              title: Text("Profile"),
-              selectedColor: Colors.teal,
-            ),
-          ],
-        ),
-      ),
+    return Scaffold(
+      body: _body(),
+      bottomNavigationBar: _bottomNavBar(),
     );
   }
+
+  Widget _body() => SizedBox.expand(
+        child: IndexedStack(
+          index: _currentIndex,
+          children: const <Widget>[
+            Dashboard(),
+            ListJob(),
+            ProfilePage(),
+          ],
+        ),
+      );
+
+  Widget _bottomNavBar() => BottomNavBar(
+        showElevation: true,
+        selectedIndex: _currentIndex,
+        onItemSelected: (index) {
+          setState(() => _currentIndex = index);
+        },
+        items: <BottomNavBarItem>[
+          BottomNavBarItem(
+            title: 'Home',
+            icon: const Icon(Icons.home),
+            activeColor: Colors.white,
+            inactiveColor: Colors.black,
+            activeBackgroundColor: Colors.red.shade300,
+          ),
+          BottomNavBarItem(
+            title: 'Profile',
+            icon: const Icon(Icons.person),
+            activeColor: Colors.white,
+            inactiveColor: Colors.black,
+            activeBackgroundColor: Colors.blue.shade300,
+          ),
+          BottomNavBarItem(
+            title: 'Message',
+            icon: const Icon(Icons.chat_bubble),
+            inactiveColor: Colors.black,
+            activeColor: Colors.white,
+            activeBackgroundColor: Colors.green.shade300,
+          ),
+        ],
+      );
 }

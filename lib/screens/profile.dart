@@ -9,17 +9,10 @@ import 'package:tuc/screens/FDrawer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProfilePage extends StatefulWidget {
+  const ProfilePage({Key? key}) : super(key: key);
+
   @override
   _ProfilePageState createState() => _ProfilePageState();
-}
-
-class _ProfilePageState extends State<ProfilePage>
-    with TickerProviderStateMixin {
-  late AnimationController _controller;
-
-  final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
-  late Future<void> _launched;
-  String _url = '';
 
   Future<void> _launchInWebViewOrVC(String url) async {
     if (await canLaunch(url)) {
@@ -33,37 +26,23 @@ class _ProfilePageState extends State<ProfilePage>
       throw 'Could not launch $url';
     }
   }
+}
 
-  void _openDrawer() {
-    _drawerKey.currentState?.openDrawer();
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(vsync: this);
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    _controller.dispose();
-  }
-
+class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     final appStyleMode = Provider.of<AppStyleModeNotifier>(context);
     return Scaffold(
-        key: _drawerKey,
         drawer: FDrawer(),
         backgroundColor: appStyleMode.backgroundWhite,
         body: SingleChildScrollView(
           child: ConstrainedBox(
             constraints: BoxConstraints(),
             child: Column(
-              children: <Widget>[
+              children: [
                 Stack(
-                  children: <Widget>[
+                  fit: StackFit.passthrough,
+                  children: [
                     Container(
                       height: 180,
                       width: double.infinity,
@@ -108,9 +87,7 @@ class _ProfilePageState extends State<ProfilePage>
                                     icon: Icon(Icons.menu,
                                         color:
                                             appStyleMode.primaryTextColorDark),
-                                    onPressed: () {
-                                      _openDrawer();
-                                    }),
+                                    onPressed: () {}),
                               ),
                             ),
                           ),
@@ -229,11 +206,7 @@ class _ProfilePageState extends State<ProfilePage>
                         height: 10,
                       ),
                       InkWell(
-                        onTap: () => setState(() {
-                          _url =
-                              "http://localhost:8000/egaz_market/add_product";
-                          _launched = _launchInWebViewOrVC(_url);
-                        }),
+                        onTap: () {},
                         child: Container(
                           padding: const EdgeInsets.symmetric(horizontal: 15),
                           width: MediaQuery.of(context).size.width - 30,
@@ -306,10 +279,7 @@ class _ProfilePageState extends State<ProfilePage>
                         height: 10,
                       ),
                       InkWell(
-                        onTap: () => setState(() {
-                          _url = "http://localhost:8000/blog";
-                          _launched = _launchInWebViewOrVC(_url);
-                        }),
+                        onTap: () => setState(() {}),
                         child: Container(
                           padding: const EdgeInsets.symmetric(horizontal: 15),
                           width: MediaQuery.of(context).size.width - 30,
@@ -462,10 +432,7 @@ class _ProfilePageState extends State<ProfilePage>
                         height: 10,
                       ),
                       InkWell(
-                        onTap: () => setState(() {
-                          _url = "http://localhost:8000/about";
-                          _launched = _launchInWebViewOrVC(_url);
-                        }),
+                        onTap: () => setState(() {}),
                         child: Container(
                           padding: const EdgeInsets.symmetric(horizontal: 15),
                           width: MediaQuery.of(context).size.width - 30,

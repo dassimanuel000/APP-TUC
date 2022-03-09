@@ -93,8 +93,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     Container(
                       child: ProgressButton(
                         onNext: () {
-                          Navigator.of(context).push(
-                              MaterialPageRoute(builder: (context) => Index()));
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => RootPage()));
                         },
                       ),
                     )
@@ -159,7 +159,7 @@ class Slide extends StatelessWidget {
           GestureDetector(
             onTap: () {
               Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => Index()));
+                  .push(MaterialPageRoute(builder: (context) => RootPage()));
             },
             child: Text(
               "Skip",
