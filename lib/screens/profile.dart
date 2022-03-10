@@ -13,22 +13,22 @@ class ProfilePage extends StatefulWidget {
 
   @override
   _ProfilePageState createState() => _ProfilePageState();
+}
 
-  Future<void> _launchInWebViewOrVC(String url) async {
-    if (await canLaunch(url)) {
+class _ProfilePageState extends State<ProfilePage> {
+  Future<void> _launchInBrowser(String s) async {
+    if (await canLaunch(s)) {
       await launch(
-        url,
+        s,
         forceWebView: true,
         forceSafariVC: true,
         headers: <String, String>{'Offres ': 'Offres'},
       );
     } else {
-      throw 'Could not launch $url';
+      throw 'Could not launch $s';
     }
   }
-}
 
-class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -127,7 +127,10 @@ class _ProfilePageState extends State<ProfilePage> {
                     //crossAxisAlignment: CrossAxisAlignment.end,
                     children: <Widget>[
                       InkWell(
-                        onTap: null,
+                        onTap: () {
+                          _launchInBrowser(
+                              "https://trouver-un-candidat.com/login");
+                        },
                         child: Container(
                           padding: const EdgeInsets.symmetric(horizontal: 15),
                           width: MediaQuery.of(context).size.width - 30,
@@ -201,7 +204,10 @@ class _ProfilePageState extends State<ProfilePage> {
                         height: 10,
                       ),
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          _launchInBrowser(
+                              "https://trouver-un-candidat.com/new-employer");
+                        },
                         child: Container(
                           padding: const EdgeInsets.symmetric(horizontal: 15),
                           width: MediaQuery.of(context).size.width - 30,
@@ -232,7 +238,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 child: Padding(
                                   padding: EdgeInsets.only(left: 5, top: 5),
                                   child: Text(
-                                    'Recrutez',
+                                    'Postez une offre',
                                     style: TextStyle(
                                       fontFamily: 'Montserrat',
                                       fontSize: 18.0,
@@ -427,7 +433,26 @@ class _ProfilePageState extends State<ProfilePage> {
                         height: 10,
                       ),
                       InkWell(
-                        onTap: () => setState(() {}),
+                        onTap: () => setState(() async {
+                          String? encodeQueryParameters(
+                              Map<String, String> params) {
+                            return params.entries
+                                .map((e) =>
+                                    '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
+                                .join('&');
+                          }
+
+                          final Uri emailLaunchUri = Uri(
+                            scheme: 'mailto',
+                            path: 'smith@example.com',
+                            query: encodeQueryParameters(<String, String>{
+                              'subject':
+                                  'Example Subject & Symbols are allowed!'
+                            }),
+                          );
+
+                          launch(emailLaunchUri.toString());
+                        }),
                         child: Container(
                           padding: const EdgeInsets.symmetric(horizontal: 15),
                           width: MediaQuery.of(context).size.width - 30,

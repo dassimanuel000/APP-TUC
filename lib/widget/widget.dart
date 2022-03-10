@@ -4,6 +4,8 @@
 import 'package:flutter/material.dart';
 import 'package:tuc/constants/color.dart';
 
+import '../main.dart';
+
 class RoundedButton extends StatelessWidget {
   const RoundedButton({
     Key? key,
@@ -102,19 +104,25 @@ class HaveAccount extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: RichText(
-        text: TextSpan(
-            style: TextStyle(
-              color: mPrimaryTextColor,
-            ),
-            children: [
-              TextSpan(text: 'Already have an account?'),
-              TextSpan(
-                text: ' Log in',
-                style: TextStyle(color: mPrimaryColor),
+    return InkWell(
+      onTap: () {
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => LoginPage()));
+      },
+      child: Center(
+        child: RichText(
+          text: TextSpan(
+              style: TextStyle(
+                color: mPrimaryTextColor,
               ),
-            ]),
+              children: [
+                TextSpan(text: 'Already have an account?'),
+                TextSpan(
+                  text: ' Log in',
+                  style: TextStyle(color: mPrimaryColor),
+                ),
+              ]),
+        ),
       ),
     );
   }
