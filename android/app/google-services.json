@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "459197970215",
+    "firebase_url": "https://trouver-un-candidat-default-rtdb.firebaseio.com",
+    "project_id": "trouver-un-candidat",
+    "storage_bucket": "trouver-un-candidat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:459197970215:android:29c099c06cd64affd7db02",
+        "android_client_info": {
+          "package_name": "com.example.tuc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "459197970215-lfg4jkjmlpat8pa811vvrlvuufggosl9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCakRnoterPEQia_1OIjNdOUIJI244Xqmk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "459197970215-lfg4jkjmlpat8pa811vvrlvuufggosl9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
