@@ -60,6 +60,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      debugShowCheckedModeBanner: false,
       home: MyHomePage(title: 'Flutter Push Notification'),
     );
   }
@@ -164,14 +165,16 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(
               height: 10.0,
             ),
-            Text(
-              'Trouver le candidat idéal ',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  color: mButtonEmailColor,
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'Montserrat'),
+            Center(
+              child: Text(
+                'Trouver le candidat idéal ',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: mButtonEmailColor,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Montserrat'),
+              ),
             ),
             SizedBox(
               height: (MediaQuery.of(context).size.height / 6),
@@ -183,12 +186,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return SignupScreen();
+                      return LoginPage();
                     },
                   ),
                 );
               },
-              text: '  Sign up with Google',
+              text: ' Sign in ',
               backgroundColor: mButtonEmailColor,
               textColor: mBackgroundColor,
             ),
@@ -197,8 +200,17 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             RoundedButton(
               img: Icons.facebook_rounded,
-              press: () {},
-              text: '  Sign up with Facebook',
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return SignupScreen();
+                    },
+                  ),
+                );
+              },
+              text: '  Sign up  ',
               backgroundColor: mButtonFacebookColor,
               textColor: Colors.white,
             ),
@@ -208,7 +220,7 @@ class _MyHomePageState extends State<MyHomePage> {
             RoundedButton(
               img: Icons.admin_panel_settings_sharp,
               press: () {},
-              text: '  Sign up with Apple',
+              text: ' Password forgot ?',
               backgroundColor: mButtonAppleColor,
               textColor: Colors.white,
             ),
@@ -308,7 +320,7 @@ class SignupScreen extends StatelessWidget {
             SizedBox(
               height: 16,
             ),
-            RoundedInput(hintText: 'user_pass', suffixText: 'SHOW'),
+            RoundedInput(hintText: 'Password', suffixText: 'SHOW'),
             SizedBox(
               height: 16,
             ),
@@ -416,7 +428,7 @@ class _LoginPage extends State<LoginPage> {
           String user_login = jsondata["user_login"];
           String user_email = jsondata["user_email"];
           print(user_login + user_email + uid);
-          //user shared preference to save data
+          //user shablueAccent preference to save data
         } else {
           showprogress = false; //don't show progress indicator
           error = true;
@@ -457,16 +469,7 @@ class _LoginPage extends State<LoginPage> {
         width: MediaQuery.of(context).size.width,
         //make width of outer wrapper to 100%
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-            colors: [
-              Colors.orange,
-              Colors.deepOrangeAccent,
-              Colors.red,
-              Colors.redAccent,
-            ],
-          ),
+          color: Colors.lightBlue,
         ), //show linear gradient background of page
 
         padding: EdgeInsets.all(20),
@@ -474,7 +477,7 @@ class _LoginPage extends State<LoginPage> {
           Container(
             margin: EdgeInsets.only(top: 80),
             child: Text(
-              "Sign Into System",
+              "Login trouver Un Candidat",
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 40,
@@ -484,7 +487,7 @@ class _LoginPage extends State<LoginPage> {
           Container(
             margin: EdgeInsets.only(top: 10),
             child: Text(
-              "Sign In using Email and user_pass",
+              "Sign In using Email and Password",
               style: TextStyle(color: Colors.white, fontSize: 15),
             ), //subtitle text
           ),
@@ -501,9 +504,9 @@ class _LoginPage extends State<LoginPage> {
             margin: EdgeInsets.only(top: 10),
             child: TextField(
               controller: _username, //set user_login controller
-              style: TextStyle(color: Colors.orange[100], fontSize: 20),
+              style: TextStyle(color: Colors.blue[100], fontSize: 20),
               decoration: myInputDecoration(
-                label: "user_login",
+                label: "Email",
                 icon: Icons.person,
               ),
               onChanged: (value) {
@@ -516,10 +519,10 @@ class _LoginPage extends State<LoginPage> {
             padding: EdgeInsets.all(10),
             child: TextField(
               controller: _password, //set user_pass controller
-              style: TextStyle(color: Colors.orange[100], fontSize: 20),
+              style: TextStyle(color: Colors.blue[100], fontSize: 20),
               obscureText: true,
               decoration: myInputDecoration(
-                label: "user_pass",
+                label: "Password",
                 icon: Icons.lock,
               ),
               onChanged: (value) {
@@ -547,9 +550,9 @@ class _LoginPage extends State<LoginPage> {
                         height: 30,
                         width: 30,
                         child: CircularProgressIndicator(
-                          backgroundColor: Colors.orange[100],
+                          backgroundColor: Colors.blue[100],
                           valueColor: AlwaysStoppedAnimation<Color>(
-                              Colors.deepOrangeAccent),
+                              Colors.lightBlueAccent),
                         ),
                       )
                     : Text(
@@ -559,7 +562,7 @@ class _LoginPage extends State<LoginPage> {
                 // if showprogress == true then show progress indicator
                 // else show "LOGIN NOW" text
                 colorBrightness: Brightness.dark,
-                color: Colors.orange,
+                color: Colors.blue,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30)
                     //button corner radius
@@ -575,7 +578,7 @@ class _LoginPage extends State<LoginPage> {
                   //action on tap
                 },
                 child: Text(
-                  "Forgot user_pass? Troubleshoot",
+                  "Forgot Password? Troubleshoot",
                   style: TextStyle(color: Colors.white, fontSize: 18),
                 )),
           )
@@ -588,12 +591,12 @@ class _LoginPage extends State<LoginPage> {
     return InputDecoration(
       hintText: label, //show label as placeholder
       hintStyle:
-          TextStyle(color: Colors.orange[100], fontSize: 20), //hint text style
+          TextStyle(color: Colors.blue[100], fontSize: 20), //hint text style
       prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 10),
           child: Icon(
             icon,
-            color: Colors.orange[100],
+            color: Colors.blue[100],
           )
           //padding and icon for prefix
           ),
@@ -602,12 +605,12 @@ class _LoginPage extends State<LoginPage> {
       enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(30),
           borderSide: BorderSide(
-              color: Colors.orange[300]!, width: 1)), //default border of input
+              color: Colors.blue[300]!, width: 1)), //default border of input
 
       focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(30),
           borderSide:
-              BorderSide(color: Colors.orange[200]!, width: 1)), //focus border
+              BorderSide(color: Colors.blue[200]!, width: 1)), //focus border
 
       fillColor: Color.fromRGBO(251, 140, 0, 0.5),
       filled: true, //set true if you want to show input background

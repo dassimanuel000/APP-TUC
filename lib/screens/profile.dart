@@ -21,8 +21,7 @@ class _ProfilePageState extends State<ProfilePage> {
       await launch(
         s,
         forceWebView: true,
-        forceSafariVC: true,
-        headers: <String, String>{'Offres ': 'Offres'},
+        forceSafariVC: false,
       );
     } else {
       throw 'Could not launch $s';
@@ -444,7 +443,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
                           final Uri emailLaunchUri = Uri(
                             scheme: 'mailto',
-                            path: 'smith@example.com',
+                            path: 'jeremywebmaster031@gmail.com',
                             query: encodeQueryParameters(<String, String>{
                               'subject':
                                   'Example Subject & Symbols are allowed!'

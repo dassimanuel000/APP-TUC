@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_new
+// ignore_for_file: unnecessary_new, unnecessary_const
 
 import 'package:bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
@@ -33,8 +33,8 @@ class _RootPageState extends State<RootPage> {
         child: IndexedStack(
           index: _currentIndex,
           children: const <Widget>[
-            Dashboard(),
-            ListJob(),
+            Dashboard(title: 'Flutter Push Notification'),
+            ListJob(title: 'Page List'),
             ProfilePage(),
           ],
         ),
@@ -55,15 +55,15 @@ class _RootPageState extends State<RootPage> {
             activeBackgroundColor: Colors.red.shade300,
           ),
           BottomNavBarItem(
-            title: 'Profile',
-            icon: const Icon(Icons.person),
+            title: 'Offres',
+            icon: const Icon(Icons.list_outlined),
             activeColor: Colors.white,
             inactiveColor: Colors.black,
             activeBackgroundColor: Colors.blue.shade300,
           ),
           BottomNavBarItem(
-            title: 'Message',
-            icon: const Icon(Icons.chat_bubble),
+            title: 'Profile',
+            icon: const Icon(Icons.person_outlined),
             inactiveColor: Colors.black,
             activeColor: Colors.white,
             activeBackgroundColor: Colors.green.shade300,
