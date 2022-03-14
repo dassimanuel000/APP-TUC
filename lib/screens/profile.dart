@@ -16,15 +16,17 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
-  Future<void> _launchInBrowser(String s) async {
-    if (await canLaunch(s)) {
+  Future<void> _launchURL(String url) async {
+    if (await canLaunch(url)) {
       await launch(
-        s,
+        url,
+        forceSafariVC: true,
         forceWebView: true,
-        forceSafariVC: false,
+        enableJavaScript: true,
+        headers: <String, String>{'my_header_key': 'my_header_value'},
       );
     } else {
-      throw 'Could not launch $s';
+      throw 'Could not launch $url';
     }
   }
 
@@ -127,8 +129,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     children: <Widget>[
                       InkWell(
                         onTap: () {
-                          _launchInBrowser(
-                              "https://trouver-un-candidat.com/login");
+                          _launchURL("https://trouver-un-candidat.com/login");
                         },
                         child: Container(
                           padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -204,7 +205,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       ),
                       InkWell(
                         onTap: () {
-                          _launchInBrowser(
+                          _launchURL(
                               "https://trouver-un-candidat.com/new-employer");
                         },
                         child: Container(

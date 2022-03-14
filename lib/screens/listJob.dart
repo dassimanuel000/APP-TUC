@@ -1,202 +1,70 @@
 // ignore_for_file: file_names, prefer_const_constructors, non_constant_identifier_names, unused_import, avoid_print, unused_element, prefer_const_literals_to_create_immutables
 
-/*// ignore_for_file: file_names, prefer_const_constructors, unnecessary_new, import_of_legacy_library_into_null_safe, prefer_const_literals_to_create_immutables, avoid_print
-
-import 'package:flutter/material.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:tuc/main.dart';
-
-class ListJob extends StatefulWidget {
-  const ListJob({Key? key}) : super(key: key);
-
-  @override
-  _ListJobState createState() => _ListJobState();
-}
-
-class _ListJobState extends State<ListJob> {
-  late AnimationController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    _controller.dispose();
-  }
-
-  void _showNotification() {
-    flutterLocalNotificationsPlugin.show(
-        0,
-        "title",
-        "body",
-        NotificationDetails(
-          android: AndroidNotificationDetails(
-            channel.id,
-            channel.name,
-            channel.description,
-            color: Colors.blue,
-            playSound: true,
-            icon: "@mipmap/ic_launcher",
-          ),
-        ));
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: InkWell(
-          child: Container(
-            child: ElevatedButton(
-              onPressed: () {
-                _showNotification;
-              },
-              child: Text('LONGGGGGGGGGGGGGGGGG'),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-
-*/
-
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:tuc/constants/color.dart';
 import 'package:tuc/screens/notif.dart';
-
-const AndroidNotificationChannel channel = AndroidNotificationChannel(
-    'high_importance_channel', // id
-    'High Importance Notifications', // title
-    'This channel is used for important notifications.', // description
-    importance: Importance.high,
-    playSound: true);
-
-// flutter local notification
-final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
-    FlutterLocalNotificationsPlugin();
-
-// firebase background message handler
-Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  await Firebase.initializeApp();
-  print('A Background message just showed up :  ${message.messageId}');
-}
 
 class ListJob extends StatefulWidget {
   const ListJob({Key? key, required this.title}) : super(key: key);
 
   final String title;
-  Future<void> main() async {
-    // firebase App initialize
-    WidgetsFlutterBinding.ensureInitialized();
-    await Firebase.initializeApp();
-    FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
-
-// Firebase local notification plugin
-    await flutterLocalNotificationsPlugin
-        .resolvePlatformSpecificImplementation<
-            AndroidFlutterLocalNotificationsPlugin>()
-        ?.createNotificationChannel(channel);
-
-//Firebase messaging
-    await FirebaseMessaging.instance
-        .setForegroundNotificationPresentationOptions(
-      alert: true,
-      badge: true,
-      sound: true,
-    );
-  }
 
   @override
   _ListJobState createState() => _ListJobState();
 }
 
 class _ListJobState extends State<ListJob> {
-  int _counter = 0;
-
   @override
   void initState() {
     super.initState();
-
-    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-      RemoteNotification? notification = message.notification;
-      AndroidNotification? android = message.notification?.android;
-      if (notification != null && android != null) {
-        flutterLocalNotificationsPlugin.show(
-            notification.hashCode,
-            notification.title,
-            notification.body,
-            NotificationDetails(
-              android: AndroidNotificationDetails(
-                channel.id,
-                channel.name,
-                channel.description,
-                color: Colors.blue,
-                playSound: true,
-                icon: '@mipmap/ic_launcher',
-              ),
-            ));
-      }
-    });
-
-    FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
-      print('A new messageopen app event was published');
-      RemoteNotification? notification = message.notification;
-      AndroidNotification? android = message.notification?.android;
-      if (notification != null && android != null) {
-        showDialog(
-            context: context,
-            builder: (_) {
-              return AlertDialog(
-                title: Text("notification.title"),
-                content: SingleChildScrollView(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [Text("notification.body")],
-                  ),
-                ),
-              );
-            });
-      }
-    });
-  }
-
-  void showNotification() {
-    _counter++;
-
-    flutterLocalNotificationsPlugin.show(
-        0,
-        "Testing $_counter",
-        "This is an Flutter Push Notification",
-        NotificationDetails(
-            android: AndroidNotificationDetails(
-                channel.id, channel.name, channel.description,
-                importance: Importance.high,
-                color: Colors.blue,
-                playSound: true,
-                icon: '@mipmap/ic_launcher')));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: mBackgroundColor,
       appBar: _Header(),
       body: ListView(
+        scrollDirection: Axis.vertical,
         children: [
-          ElevatedButton(
-            onPressed: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => MyAppNotif()));
-            },
-            child: Text('LONGGGGGGGGGGGGGGGGG'),
-          ),
+          ExpansionTile(
+            leading: Icon(
+              Icons.message_rounded,
+              color: gradientStartColor,
+            ),
+            title: Text("Mes Messages"),
+            children: [
+              Flexible(
+                child: Container(
+                  child: Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Column(children: [
+                      Padding(
+                        padding: EdgeInsets.all(0.0),
+                        child: Text(
+                          "by :" + "Author",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(0.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("\n" +
+                                "Message   AllocSpace objects, 10(328KB) LOS objects, 42% free, 2854KB/4958KB, paused 6.594ms total 506.128ms"),
+                          ],
+                        ),
+                      ),
+                    ]),
+                  ),
+                ),
+              )
+            ],
+          )
         ],
       ),
     );

@@ -1,8 +1,9 @@
-// ignore_for_file: prefer_const_constructors, avoid_print
+// ignore_for_file: prefer_const_constructors, avoid_print, unused_element
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:tuc/constants/color.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../main.dart';
 
@@ -126,4 +127,23 @@ class HaveAccount extends StatelessWidget {
       ),
     );
   }
+}
+
+AppBar navigatorpop(BuildContext context) {
+  return AppBar(
+    backgroundColor: mBackgroundColor,
+    elevation: 0,
+    leading: InkWell(
+      child: Icon(
+        Icons.arrow_back_ios,
+        color: Colors.black87,
+      ),
+      onTap: () {
+        Navigator.pop(context);
+      },
+    ),
+    centerTitle: false,
+    automaticallyImplyLeading: false,
+    actions: <Widget>[],
+  );
 }

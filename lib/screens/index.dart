@@ -49,21 +49,21 @@ class _RootPageState extends State<RootPage> {
         items: <BottomNavBarItem>[
           BottomNavBarItem(
             title: 'Home',
-            icon: const Icon(Icons.home),
+            icon: const Icon(Icons.view_comfy_alt),
             activeColor: Colors.white,
             inactiveColor: Colors.black,
             activeBackgroundColor: Colors.red.shade300,
           ),
           BottomNavBarItem(
-            title: 'Offres',
-            icon: const Icon(Icons.list_outlined),
+            title: 'Profiles',
+            icon: const Icon(Icons.person_outlined),
             activeColor: Colors.white,
             inactiveColor: Colors.black,
             activeBackgroundColor: Colors.blue.shade300,
           ),
           BottomNavBarItem(
-            title: 'Profile',
-            icon: const Icon(Icons.person_outlined),
+            title: 'Settings',
+            icon: const Icon(Icons.settings_outlined),
             inactiveColor: Colors.black,
             activeColor: Colors.white,
             activeBackgroundColor: Colors.green.shade300,

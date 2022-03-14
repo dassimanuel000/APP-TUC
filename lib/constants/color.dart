@@ -41,6 +41,8 @@ Color typeMessageBoxColor = Colors.grey[200]!;
 Color backgroundWhite = Colors.white;
 Color buttonWhite = Colors.white;
 
+Color accountPurple = Color(0xff5b60ec);
+
 class AppStyleModeNotifier extends ChangeNotifier {
   Color firstColor = Colors.blueAccent;
   Color secondColor = Colors.blueAccent.withOpacity(0.3);

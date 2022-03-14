@@ -32,24 +32,24 @@
         "source": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_adaptive_back.png"
     },
     {
-        "merged": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_adaptive_back.png.flat",
-        "source": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_adaptive_back.png"
-    },
-    {
         "merged": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_adaptive_fore.png.flat",
         "source": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_adaptive_fore.png"
+    },
+    {
+        "merged": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_adaptive_back.png.flat",
+        "source": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_adaptive_back.png"
     },
     {
         "merged": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_adaptive_back.png.flat",
         "source": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_adaptive_back.png"
     },
     {
-        "merged": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_adaptive_fore.png.flat",
         "source": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_adaptive_fore.png"
+    },
+    {
+        "merged": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_adaptive_fore.png.flat",
@@ -64,12 +64,12 @@
         "source": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_adaptive_back.png"
     },
     {
-        "merged": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_adaptive_fore.png.flat",
-        "source": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_adaptive_fore.png"
-    },
-    {
         "merged": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_adaptive_fore.png.flat",
         "source": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_adaptive_fore.png"
+    },
+    {
+        "merged": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_adaptive_fore.png.flat",
+        "source": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_adaptive_fore.png"
     },
     {
         "merged": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\build\\app\\intermediates\\res\\merged\\debug\\drawable_ic_launcher.png.flat",

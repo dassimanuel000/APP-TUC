@@ -14,6 +14,7 @@ import 'package:http/http.dart' as http;
 import 'package:tuc/constants/color.dart';
 import 'package:tuc/screens/index.dart';
 import 'package:tuc/widget/widget.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 const AndroidNotificationChannel channel = AndroidNotificationChannel(
     'high_importance_channel', // id
@@ -51,7 +52,7 @@ Future<void> main() async {
     sound: true,
   );
 
-  await FirebaseMessaging.instance.subscribeToTopic('news');
+  //await FirebaseMessaging.instance.subscribeToTopic('news');
 
   runApp(MyApp());
 }
@@ -147,6 +148,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 icon: '@mipmap/ic_launcher')));
   }
 
+  Future<void> _launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(
+        url,
+        forceSafariVC: true,
+        forceWebView: true,
+        enableJavaScript: true,
+        headers: <String, String>{'my_header_key': 'my_header_value'},
+      );
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -184,7 +199,7 @@ class _MyHomePageState extends State<MyHomePage> {
               height: (MediaQuery.of(context).size.height / 6),
             ),
             RoundedButton(
-              img: Icons.g_mobiledata_outlined,
+              img: Icons.group_rounded,
               press: () {
                 Navigator.push(
                   context,
@@ -195,7 +210,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 );
               },
-              text: ' Sign in ',
+              text: ' Get Started ',
               backgroundColor: mButtonEmailColor,
               textColor: mBackgroundColor,
             ),
@@ -203,7 +218,7 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 16,
             ),
             RoundedButton(
-              img: Icons.facebook_rounded,
+              img: Icons.admin_panel_settings_sharp,
               press: () {
                 Navigator.push(
                   context,
@@ -214,7 +229,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 );
               },
-              text: '  Sign up  ',
+              text: ' Se Faire Reférencer ',
               backgroundColor: mButtonFacebookColor,
               textColor: Colors.white,
             ),
@@ -222,8 +237,11 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 16,
             ),
             RoundedButton(
-              img: Icons.admin_panel_settings_sharp,
-              press: () {},
+              img: Icons.wifi_tethering_error,
+              press: () {
+                _launchURL(
+                    "mailto:jeremywebmaster031@gmail.com?subject=Password forgot ");
+              },
               text: ' Password forgot ?',
               backgroundColor: mButtonAppleColor,
               textColor: Colors.white,
@@ -270,7 +288,7 @@ class _MyHomePageState extends State<MyHomePage> {
               tooltip: 'Change language',
               color: mButtonAppleColor,
               onPressed: () {
-                showNotification;
+                Changelanguage(context);
               },
             ),
           ],
@@ -285,81 +303,139 @@ class SignupScreen extends StatelessWidget {
 
   SignupScreen({Key? key}) : super(key: key);
 
+  Future<void> _launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(
+        url,
+        forceSafariVC: true,
+        forceWebView: true,
+        enableJavaScript: true,
+        headers: <String, String>{'my_header_key': 'my_header_value'},
+      );
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(context),
-      backgroundColor: mBackgroundColor,
-      body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Text(
-              'Let\'s do some Adventure',
-              style: TextStyle(
-                color: mPrimaryTextColor,
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(
-              height: sizeboz,
-            ),
-            Text(
-              "Create an account to get started",
-            ),
-            SizedBox(
-              height: 36,
-            ),
-            RoundedInput(
-              hintText: 'Name',
-            ),
-            SizedBox(
-              height: 16,
-            ),
-            RoundedInput(
-              hintText: 'Email',
-            ),
-            SizedBox(
-              height: 16,
-            ),
-            RoundedInput(hintText: 'Password', suffixText: 'SHOW'),
-            SizedBox(
-              height: 16,
-            ),
-            Row(
-              children: <Widget>[
-                Checkbox(value: false, onChanged: (value) {}),
-                Text('I accept the Terms of Use')
-              ],
-            ),
-            SizedBox(
-              height: 36,
-            ),
-            RoundedButton(
-              img: Icons.arrow_forward_ios_rounded,
-              press: () {},
-              backgroundColor: mPrimaryColor,
-              text: 'Sign up',
-              textColor: Colors.white,
-            ),
-            Container(
-              padding: EdgeInsets.symmetric(vertical: 16, horizontal: 50),
-              child: Text(
-                'By continuing, you agree to accept our Privacy Policy & Terms of Service',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 12,
-                ),
-              ),
-            ),
-            SizedBox(
-              height: MediaQuery.of(context).size.width / 100,
-            ),
-            HaveAccount(),
-          ],
+      appBar: navigatorpop(context),
+      backgroundColor: Color(
+          0xffffffff), //you can paste your custom code color, but this one is for demo purpose,
+      body: ListView(
+        padding: EdgeInsets.all(12),
+        physics: BouncingScrollPhysics(), //use this for a bouncing experience
+        children: [
+          Container(height: 35),
+          userTile(),
+          divider(),
+          colorTiles(),
+          divider(),
+          bwTiles(),
+        ],
+      ),
+      // floatingActionButton: fab(),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+    );
+  }
+
+  Widget userTile() {
+    //I use pixabay.com & unsplash.com for most of the time.
+    return ListTile(
+        leading: CircleAvatar(
+          backgroundImage: NetworkImage("https://i.ibb.co/HdgCQVN/iconB.png"),
         ),
+        title: Text(
+          "Equipe Trouver un candidat",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        subtitle: Text(
+          "Service en ligne",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ));
+  }
+
+  Widget divider() {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Divider(
+        thickness: 1.5,
+      ),
+    );
+  }
+
+  Widget colorTiles() {
+    return Column(
+      children: [
+        colorTile(Icons.mail_outline, Colors.deepPurple, () {
+          String? encodeQueryParameters(Map<String, String> params) {
+            return params.entries
+                .map((e) =>
+                    '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
+                .join('&');
+          }
+
+          final Uri emailLaunchUri = Uri(
+            scheme: 'mailto',
+            path: 'contact@trouver-un-candidat.com',
+            query: encodeQueryParameters(
+                <String, String>{'subject': 'Me faire référencer !'}),
+          );
+
+          launch(emailLaunchUri.toString());
+        }, "Contactez par mail"),
+        colorTile(Icons.phone_iphone, Colors.blue, () {
+          launch("tel://0768128023");
+        }, "Contactez par Télephone"),
+        colorTile(Icons.security_outlined, Colors.pink, () {
+          _launchURL("https://trouver-un-candidat.com/me-faire-referencer/");
+        }, "S'inscrire"),
+        colorTile(Icons.favorite_border, Colors.orange, () {
+          _launchURL("https://trouver-un-candidat.com/terms/");
+        }, "Mentions Légales"),
+      ],
+    );
+  }
+
+  Widget bwTiles() {
+    // Color color = Colors.blueGrey.shade800; not satisfied, so let us pick it
+    return Column(
+      children: [
+        bwTile(Icons.info_outline, "Admin login", () {
+          _launchURL("https://trouver-un-candidat.com/wp-login.php");
+        }),
+      ],
+    );
+  }
+
+//only for ease of understanding, other wise you can use colorTile Directly,
+// in my preference, i split the widgets into as many chunks as possible
+
+  Widget bwTile(IconData icon, String text, VoidCallback calls) {
+    return colorTile(icon, Colors.black, calls, text, blackAndWhite: true);
+  }
+
+  Widget colorTile(IconData icon, Color color, VoidCallback call, String text,
+      {bool blackAndWhite = false}) {
+    Color pickedColor = Color(0xfff3f4fe);
+    return InkWell(
+      onTap: call,
+      child: ListTile(
+        leading: Container(
+          child: Icon(icon, color: color),
+          height: 45,
+          width: 45,
+          decoration: BoxDecoration(
+            color: blackAndWhite ? pickedColor : color.withOpacity(0.09),
+            borderRadius: BorderRadius.circular(18),
+          ),
+        ),
+        title: Text(
+          text,
+          style: TextStyle(fontWeight: FontWeight.w500),
+        ),
+        trailing: Icon(Icons.arrow_forward_ios, color: Colors.black, size: 20),
       ),
     );
   }
@@ -411,6 +487,9 @@ class _LoginPage extends State<LoginPage> {
   var _password = TextEditingController();
 
   startLogin() async {
+    // Get the token each time the application loads
+    String? _token = await FirebaseMessaging.instance.getToken();
+
     String apiurl = "https://trouver-un-candidat.com/test/login.php"; //api url
     //dont use http://localhost , because emulator don't get that address
     //insted use your local IP address or use live URL
@@ -459,7 +538,7 @@ class _LoginPage extends State<LoginPage> {
   }
 
   @override
-  Future<void> initState() async {
+  void initState() {
     user_login = "";
     user_pass = "";
     errormsg = "";
@@ -469,15 +548,6 @@ class _LoginPage extends State<LoginPage> {
     //_username.text = "defaulttext";
     //_password.text = "defaultpassword";
     super.initState();
-
-    // Get the token each time the application loads
-    String? token = await FirebaseMessaging.instance.getToken();
-
-    // Save the initial token to the database
-    await saveTokenToDatabase(token!);
-
-    // Any time the token refreshes, store this in the database too.
-    FirebaseMessaging.instance.onTokenRefresh.listen(saveTokenToDatabase);
   }
 
   @override
@@ -970,4 +1040,92 @@ class ProgressPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(CustomPainter old) => true;
+}
+
+Changelanguage(context) async {
+  return showDialog(
+      context: context,
+      builder: (context) {
+        return Center(
+            child: Material(
+                type: MaterialType.transparency,
+                child: Container(
+                  height: 250.0,
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(15)),
+                  child: ListView(
+                    children: [
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 20, top: 10),
+                        child: Text(
+                          'Change language',
+                          style: TextStyle(
+                              color: Colors.black26,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: "Open",
+                              fontSize: 16),
+                        ),
+                      ),
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(left: 20, top: 10, right: 20),
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.of(context).pop();
+                            showAlertDialog;
+                          },
+                          child: Container(
+                            height: 46,
+                            width: MediaQuery.of(context).size.width * 0.7,
+                            decoration: BoxDecoration(
+                                color: mButtonFacebookColor,
+                                borderRadius: BorderRadius.circular(5)),
+                            child: Padding(
+                              padding: const EdgeInsets.all(12.0),
+                              child: Text(
+                                'Français ( Fr )',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: "Open",
+                                    fontSize: 16),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                )));
+      });
+}
+
+showAlertDialog(BuildContext context) {
+  // set up the button
+  Widget okButton = TextButton(
+    child: Text("OK"),
+    onPressed: () {},
+  );
+
+  // set up the AlertDialog
+  AlertDialog alert = AlertDialog(
+    title: Text("Modifications"),
+    content: Text("Demande de modifications validé."),
+    actions: [
+      okButton,
+    ],
+  );
+
+  // show the dialog
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return alert;
+    },
+  );
 }

@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.tuc">
    <application
-        android:label="Trouver-un-Candidat"
+        android:label="tuc"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

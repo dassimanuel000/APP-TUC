@@ -61,7 +61,7 @@ $to = "/topics/news";
 
 $notification = array(
 
-    'title' => "Nouvelle Offres!",
+    'title' => "Nouvelle Offres Trouver un candidat !",
 
     'body' => "A new tournament is ready, Join now or miss out"
 
