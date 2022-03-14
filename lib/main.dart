@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:http/http.dart' as http;
 
 import 'package:tuc/constants/color.dart';
@@ -48,6 +50,8 @@ Future<void> main() async {
     badge: true,
     sound: true,
   );
+
+  await FirebaseMessaging.instance.subscribeToTopic('news');
 
   runApp(MyApp());
 }
@@ -97,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 channel.description,
                 color: Colors.blue,
                 playSound: true,
-                icon: '@mipmap/ic_lancher',
+                icon: '@mipmap/ic_launcher',
               ),
             ));
       }
@@ -381,6 +385,15 @@ class SignupScreen extends StatelessWidget {
   }
 }
 
+Future<void> saveTokenToDatabase(String token) async {
+  // Assume user is logged in for this example
+  String userId = FirebaseAuth.instance.currentUser!.uid;
+
+  await FirebaseFirestore.instance.collection('users').doc(userId).update({
+    'tokens': FieldValue.arrayUnion([token]),
+  });
+}
+
 class LoginPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -389,6 +402,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPage extends State<LoginPage> {
+  late String _token;
   late String errormsg;
   late bool error, showprogress;
   late String user_login, user_pass;
@@ -445,7 +459,7 @@ class _LoginPage extends State<LoginPage> {
   }
 
   @override
-  void initState() {
+  Future<void> initState() async {
     user_login = "";
     user_pass = "";
     errormsg = "";
@@ -455,6 +469,15 @@ class _LoginPage extends State<LoginPage> {
     //_username.text = "defaulttext";
     //_password.text = "defaultpassword";
     super.initState();
+
+    // Get the token each time the application loads
+    String? token = await FirebaseMessaging.instance.getToken();
+
+    // Save the initial token to the database
+    await saveTokenToDatabase(token!);
+
+    // Any time the token refreshes, store this in the database too.
+    FirebaseMessaging.instance.onTokenRefresh.listen(saveTokenToDatabase);
   }
 
   @override

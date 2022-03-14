@@ -130,7 +130,7 @@ MERGED from [com.jakewharton.threetenabp:threetenabp:1.2.3] C:\Users\admin\.grad
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.6.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\61fe5ccd7a7d9c5c9411b2ffe443464c\core-1.6.0\AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:4:9-28
+		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:4:9-44
 	android:icon
 		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:5:9-43
 activity#com.example.tuc.MainActivity

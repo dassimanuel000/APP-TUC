@@ -46,8 +46,8 @@
 26        android:debuggable="true"
 27        android:icon="@mipmap/ic_launcher"
 27-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:5:9-43
-28        android:label="tuc" >
-28-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:4:9-28
+28        android:label="Trouver-un-Candidat" >
+28-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:4:9-44
 29        <activity
 29-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:6:9-25:20
 30            android:name="com.example.tuc.MainActivity"

@@ -219,7 +219,7 @@ class _DashboardState extends State<Dashboard> {
                 channel.description,
                 color: Colors.blue,
                 playSound: true,
-                icon: '@mipmap/ic_lancher',
+                icon: '@mipmap/ic_launcher',
               ),
             ));
       }
