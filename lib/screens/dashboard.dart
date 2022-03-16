@@ -1,7 +1,39 @@
-// ignore_for_file: prefer_const_constructors, non_constant_identifier_names, unused_import, avoid_print, unused_element
+// ignore_for_file: prefer_const_constructors, non_constant_identifier_names, unused_import, avoid_print, unused_element, unused_local_variable, unnecessary_null_comparison
 
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 import 'package:tuc/constants/color.dart';
+import 'package:http/http.dart';
+import 'package:intl/intl.dart';
+import 'package:tuc/screens/searchPage.dart';
+
+final url = "https://trouver-un-candidat.com/test/login.php";
+
+class HttpService {
+  static const Map<String, String> _JSON_HEADERS = {
+    "content-type": "application/json"
+  };
+  final String postsURL =
+      "https://www.trouver-un-candidat.com/test/index.php?user=421";
+  Future<List<Post>> getPosts() async {
+    Response res = await get(Uri.parse(postsURL), headers: _JSON_HEADERS);
+
+    if (res.statusCode == 200) {
+      List<dynamic> body = jsonDecode(res.body);
+
+      List<Post> posts = body
+          .map(
+            (dynamic item) => Post.fromJson(item),
+          )
+          .toList();
+
+      return posts;
+    } else {
+      throw "Unable to retrieve posts.";
+    }
+  }
+}
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key, required this.title}) : super(key: key);
@@ -13,6 +45,8 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
+  final HttpService httpService = HttpService();
+  final DateFormat formatter = DateFormat('yyyy-MM-dd');
   @override
   void initState() {
     super.initState();
@@ -29,22 +63,47 @@ class _DashboardState extends State<Dashboard> {
           SizedBox(
             height: 10.0,
           ),
-          tile(),
+          tile("Alertes Emploi"),
           SizedBox(
             height: 10.0,
           ),
-          GridView.count(
-            crossAxisCount: 2,
-            primary: false,
-            crossAxisSpacing: 2.0,
-            mainAxisSpacing: 4.0,
-            shrinkWrap: true,
-            children: <Widget>[
-              _buildCard('Lille', 'Available', 1),
-              _buildCard('Vente', 'Away', 2),
-              _buildCard('Dev', 'Available', 3),
-            ],
-          )
+          FutureBuilder(
+            future: httpService.getPosts(),
+            builder:
+                (BuildContext context, AsyncSnapshot<List<Post>> snapshot) {
+              if (snapshot.hasData) {
+                List<Post>? posts = snapshot.data;
+                print(post);
+                return Column(
+                  children: posts!
+                      .map(
+                        (Post post) => ListTile(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Search(
+                                    text: post.ID,
+                                  ),
+                                ));
+                          },
+                          leading: CircleAvatar(
+                            child: Image.network(
+                                'https://i.ibb.co/3r1MkCM/icon.png'),
+                            backgroundColor: Colors.white,
+                          ),
+                          title: Text("${post.post_title}"),
+                          subtitle: Text("${post.post_modified}"),
+                          trailing: Icon(Icons.arrow_forward_ios_rounded),
+                        ),
+                      )
+                      .toList(),
+                );
+              } else {
+                return Center(child: CircularProgressIndicator());
+              }
+            },
+          ),
         ],
       ),
     );
@@ -99,13 +158,13 @@ class _DashboardState extends State<Dashboard> {
     );
   }
 
-  Widget tile() {
+  Widget tile(String title) {
     return Container(
       margin: EdgeInsets.all(16),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Text(
-          "Vos alertes",
+          "${title}",
           style: kTitleStyle,
         ),
       ),
@@ -126,7 +185,7 @@ class _DashboardState extends State<Dashboard> {
                 width: 60.0,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30.0),
-                    color: Colors.green,
+                    color: Colors.white,
                     image: DecorationImage(
                         image:
                             NetworkImage('https://i.ibb.co/3r1MkCM/icon.png'))),
@@ -220,4 +279,30 @@ class _DashboardState extends State<Dashboard> {
           SizedBox(width: 20)
         ],
       );
+}
+
+class Post {
+  final String post_author;
+  final String ID;
+  final String post_title;
+  final String post_status;
+  final String post_modified;
+
+  Post({
+    required this.post_author,
+    required this.ID,
+    required this.post_title,
+    required this.post_status,
+    required this.post_modified,
+  });
+
+  factory Post.fromJson(Map<String, dynamic> json) {
+    return Post(
+      post_author: json['post_author'] as String,
+      ID: json['ID'] as String,
+      post_title: json['post_title'] as String,
+      post_status: json['post_status'] as String,
+      post_modified: json['post_modified'] as String,
+    );
+  }
 }

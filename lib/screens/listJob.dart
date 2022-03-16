@@ -37,32 +37,30 @@ class _ListJobState extends State<ListJob> {
             ),
             title: Text("Mes Messages"),
             children: [
-              Flexible(
-                child: Container(
-                  child: Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Column(children: [
-                      Padding(
-                        padding: EdgeInsets.all(0.0),
-                        child: Text(
-                          "by :" + "Author",
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
+              Container(
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Column(children: [
+                    Padding(
+                      padding: EdgeInsets.all(0.0),
+                      child: Text(
+                        "by :" + "Author",
+                        style: TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      Padding(
-                        padding: EdgeInsets.all(0.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text("\n" +
-                                "Message   AllocSpace objects, 10(328KB) LOS objects, 42% free, 2854KB/4958KB, paused 6.594ms total 506.128ms"),
-                          ],
-                        ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.all(0.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("\n" +
+                              "Message   AllocSpace objects, 10(328KB) LOS objects, 42% free, 2854KB/4958KB, paused 6.594ms total 506.128ms"),
+                        ],
                       ),
-                    ]),
-                  ),
+                    ),
+                  ]),
                 ),
-              )
+              ),
             ],
           )
         ],

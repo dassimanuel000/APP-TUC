@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors, avoid_print, prefer_const_literals_to_create_immutables, duplicate_ignore
+// ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors, avoid_print, prefer_const_literals_to_create_immutables, duplicate_ignore, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -145,7 +145,6 @@ class _MyHomePageNotifState extends State<MyHomePageNotif> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          // ignore: prefer_const_literals_to_create_immutables
           children: <Widget>[
             Text(
               'This is Flutter Push Notification Example',

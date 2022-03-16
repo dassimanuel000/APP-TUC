@@ -12,7 +12,7 @@
 12         to allow setting breakpoints, to provide hot reload, etc.
 13    -->
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:32:6-68
+14-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:32:6-67
 14-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:32:23-65
 15    <uses-permission android:name="android.permission.WAKE_LOCK" />
 15-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-68

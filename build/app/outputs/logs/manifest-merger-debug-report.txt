@@ -208,9 +208,9 @@ ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\andro
 	android:name
 		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:29:13-44
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:32:6-68
-MERGED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:32:6-68
-MERGED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:32:6-68
+ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:32:6-67
+MERGED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:32:6-67
+MERGED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:32:6-67
 MERGED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-67
 MERGED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-67
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\e8294ca460e6736de6c16705fc406b53\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:26:5-67
