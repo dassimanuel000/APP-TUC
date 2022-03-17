@@ -41,10 +41,10 @@ class _SearchState extends State<AlertList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: navigatorpop(context),
-      body: Container(
-        height: MediaQuery.of(context).size.height,
-        child: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Container(
+          height: MediaQuery.of(context).size.height,
           child: ListView(
             children: [
               FutureBuilder(
