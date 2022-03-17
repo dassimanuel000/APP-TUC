@@ -280,7 +280,10 @@ class _ProfilePageState extends State<ProfilePage> {
                         height: 10,
                       ),
                       InkWell(
-                        onTap: () => setState(() {}),
+                        onTap: () {
+                          _launchURL(
+                              "https://trouver-un-candidat.com/articles/");
+                        },
                         child: Container(
                           padding: const EdgeInsets.symmetric(horizontal: 15),
                           width: MediaQuery.of(context).size.width - 30,
@@ -311,7 +314,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 child: Padding(
                                   padding: EdgeInsets.only(left: 5, top: 5),
                                   child: Text(
-                                    'Discuss with Users',
+                                    "Articles D'emplois",
                                     style: TextStyle(
                                       fontFamily: 'Montserrat',
                                       fontSize: 16.0,
@@ -356,8 +359,8 @@ class _ProfilePageState extends State<ProfilePage> {
                       InkWell(
                         onTap: () {
                           SweetAlert.show(context,
-                              title: "PASSER EN OFFLINE",
-                              subtitle: "Vous devez telecharger les Offres",
+                              title: "RECHARGER LES OFFRES",
+                              subtitle: "Vous pouvez voir les Offres",
                               style: SweetAlertStyle.success);
                         },
                         child: Container(
@@ -390,7 +393,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 child: Padding(
                                   padding: EdgeInsets.only(left: 5, top: 5),
                                   child: Text(
-                                    'Passer en Offline',
+                                    'Actualiser les offres',
                                     style: TextStyle(
                                       fontFamily: 'Montserrat',
                                       fontSize: 18.0,
@@ -446,8 +449,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             scheme: 'mailto',
                             path: 'jeremywebmaster031@gmail.com',
                             query: encodeQueryParameters(<String, String>{
-                              'subject':
-                                  'Example Subject & Symbols are allowed!'
+                              'subject': 'SERVICE EN LIGNE TROUVER UN CANDIDAT!'
                             }),
                           );
 

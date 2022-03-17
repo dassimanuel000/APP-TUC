@@ -4,36 +4,11 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:tuc/constants/color.dart';
-import 'package:http/http.dart';
+import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
+import 'package:tuc/screens/AlerteLIST.dart';
 import 'package:tuc/screens/searchPage.dart';
-
-final url = "https://trouver-un-candidat.com/test/login.php";
-
-class HttpService {
-  static const Map<String, String> _JSON_HEADERS = {
-    "content-type": "application/json"
-  };
-  final String postsURL =
-      "https://www.trouver-un-candidat.com/test/index.php?user=421";
-  Future<List<Post>> getPosts() async {
-    Response res = await get(Uri.parse(postsURL), headers: _JSON_HEADERS);
-
-    if (res.statusCode == 200) {
-      List<dynamic> body = jsonDecode(res.body);
-
-      List<Post> posts = body
-          .map(
-            (dynamic item) => Post.fromJson(item),
-          )
-          .toList();
-
-      return posts;
-    } else {
-      throw "Unable to retrieve posts.";
-    }
-  }
-}
+import 'package:tuc/widget/widget.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key, required this.title}) : super(key: key);
@@ -45,8 +20,9 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
-  final HttpService httpService = HttpService();
   final DateFormat formatter = DateFormat('yyyy-MM-dd');
+
+  var keyword = TextEditingController();
   @override
   void initState() {
     super.initState();
@@ -59,7 +35,7 @@ class _DashboardState extends State<Dashboard> {
       appBar: _Header(),
       body: ListView(
         children: [
-          search(),
+          search(keyword),
           SizedBox(
             height: 10.0,
           ),
@@ -67,49 +43,19 @@ class _DashboardState extends State<Dashboard> {
           SizedBox(
             height: 10.0,
           ),
-          FutureBuilder(
-            future: httpService.getPosts(),
-            builder:
-                (BuildContext context, AsyncSnapshot<List<Post>> snapshot) {
-              if (snapshot.hasData) {
-                List<Post>? posts = snapshot.data;
-                print(post);
-                return Column(
-                  children: posts!
-                      .map(
-                        (Post post) => ListTile(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Search(
-                                    text: post.ID,
-                                  ),
-                                ));
-                          },
-                          leading: CircleAvatar(
-                            child: Image.network(
-                                'https://i.ibb.co/3r1MkCM/icon.png'),
-                            backgroundColor: Colors.white,
-                          ),
-                          title: Text("${post.post_title}"),
-                          subtitle: Text("${post.post_modified}"),
-                          trailing: Icon(Icons.arrow_forward_ios_rounded),
-                        ),
-                      )
-                      .toList(),
-                );
-              } else {
-                return Center(child: CircularProgressIndicator());
-              }
-            },
-          ),
+          Container(
+              margin: EdgeInsets.only(bottom: 20),
+              child: Container(
+                padding: EdgeInsets.all(15.0),
+                height: MediaQuery.of(context).size.width,
+                child: new View(),
+              )),
         ],
       ),
     );
   }
 
-  Widget search() {
+  Widget search(var keyword) {
     return Container(
       margin: EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -128,17 +74,23 @@ class _DashboardState extends State<Dashboard> {
         children: [
           Expanded(
             child: TextField(
+              controller: keyword, //set user_pass controller
               decoration: InputDecoration(
                 hintText: 'Search..',
                 border: InputBorder.none,
-                prefixIcon: Icon(
-                  Icons.search,
-                  color: Colors.indigo[900],
-                ),
                 isDense: true,
                 contentPadding: EdgeInsets.all(0),
               ),
               textAlignVertical: TextAlignVertical.center,
+              onSubmitted: (value) {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Search(
+                        text: keyword.text,
+                      ),
+                    ));
+              },
             ),
           ),
           Container(
@@ -152,7 +104,15 @@ class _DashboardState extends State<Dashboard> {
                 color: Colors.indigo[900],
                 size: 30,
               ),
-              onPressed: () {}),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Search(
+                        text: keyword.text,
+                      ),
+                    ));
+              }),
         ],
       ),
     );
@@ -171,7 +131,7 @@ class _DashboardState extends State<Dashboard> {
     );
   }
 
-  Widget _buildCard(String name, String status, int cardIndex) {
+  Widget _buildCard(String name, String status, String cardIndex) {
     return Card(
         shape:
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
@@ -240,7 +200,7 @@ class _DashboardState extends State<Dashboard> {
                     )))
           ],
         ),
-        margin: cardIndex.isEven
+        margin: 1.isEven
             ? EdgeInsets.fromLTRB(10.0, 0.0, 25.0, 10.0)
             : EdgeInsets.fromLTRB(25.0, 0.0, 5.0, 10.0));
   }
@@ -265,44 +225,65 @@ class _DashboardState extends State<Dashboard> {
               color: Colors.black87,
             ),
             onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Search(
+                      text: "0",
+                    ),
+                  ));
               print("click search");
             },
           ),
           SizedBox(width: 10),
-          InkWell(
-            child: Icon(
-              Icons.notifications_outlined,
-              color: Colors.black87,
-            ),
-            onTap: () {},
-          ),
           SizedBox(width: 20)
         ],
       );
 }
 
-class Post {
-  final String post_author;
-  final String ID;
-  final String post_title;
-  final String post_status;
-  final String post_modified;
+class View extends StatelessWidget {
+  Future getData() async {
+    var url = 'https://www.trouver-un-candidat.com/test/index.php?user=100';
+    var response = await http.get(Uri.parse(url));
+    Map<String, dynamic> map = json.decode(response.body);
+    List<dynamic> data = map["job_alert"];
+    return data;
+  }
 
-  Post({
-    required this.post_author,
-    required this.ID,
-    required this.post_title,
-    required this.post_status,
-    required this.post_modified,
-  });
-
-  factory Post.fromJson(Map<String, dynamic> json) {
-    return Post(
-      post_author: json['post_author'] as String,
-      ID: json['ID'] as String,
-      post_title: json['post_title'] as String,
-      post_status: json['post_status'] as String,
-      post_modified: json['post_modified'] as String,
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder(
+      future: getData(),
+      builder: (context, AsyncSnapshot snapshot) {
+        if (snapshot.hasError) print(snapshot.error);
+        return snapshot.hasData
+            ? ListView.builder(
+                itemCount: snapshot.data.length,
+                itemBuilder: (BuildContext context, int index) {
+                  List list = snapshot.data;
+                  //list = list['job_alert'];
+                  return ListTile(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => AlertList(
+                              text: list[index]['post_author'],
+                            ),
+                          ));
+                    },
+                    leading: CircleAvatar(
+                      child: Image.asset('assets/images/ic_launcher.png'),
+                      backgroundColor: Colors.white,
+                    ),
+                    title: Text("${list[index]['post_title']}"),
+                    subtitle:
+                        Text("Fait le : " + "${list[index]['post_modified']}"),
+                    trailing: Icon(Icons.arrow_forward_ios_rounded),
+                  );
+                })
+            : ProgressLife();
+      },
     );
   }
 }
