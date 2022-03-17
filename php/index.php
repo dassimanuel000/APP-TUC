@@ -15,6 +15,17 @@ $userID = substr($hostname, strpos($hostname, "=") + 1);
 
 $link = mysqli_connect($dbhost, $dbuser, $dbpassword, $db);
 
+function RemoveSpecialChar($str)
+{
+
+    // Using str_ireplace() function 
+    // to replace the word 
+    $res = str_ireplace(array('\'', '"', ',', ';', '<', '>'), ' ', $str);
+    $res =iconv(mb_detect_encoding($res, mb_detect_order(), true), "UTF-8", $res);
+
+    // returning the result 
+    return $res;
+}
 
 if ($userID) {
     $sql = "SELECT * FROM wp_posts WHERE post_author='.$userID.' AND post_type='job_alert' ";
@@ -24,6 +35,10 @@ if ($userID) {
 
     $filtres = array();
     $category = array();
+    $offres = array();
+    $location = array();
+    $Big_offre = array();
+    $rows = array();
     //check if there is any row
     if ($numrows > 0) {
 
@@ -45,36 +60,86 @@ if ($userID) {
 
                     array_push($filtres, json_decode(($row["meta_value"]), true));
                 }
-
             }
             $return["filtre"] = $filtres;
-            
+
             /*********************** */
 
-            for ($j = 0; $j < count($filtres); $j++ ) {
-                array_push($category,
-                    $return["filtre"][$j]['filter-category']
-                );
-                
-                $sql_relation = "SELECT object_id FROM wp_term_relationships WHERE term_taxonomy_id=" . $return["filtre"][$j]['filter-category'] . " ";
-                $result_relation = mysqli_query($link, $sql_relation);
-
-                while ($row_relation = mysqli_fetch_assoc($result_relation)) {
-
-                    $return["zzzzzzzzfziltre"] = $row_relation;
-
+            for ($j = 0; $j < count($filtres); $j++) {
+                if (array_key_exists('filter-category', $return["filtre"][$j])) {
+                    array_push(
+                        $category,
+                        $return["filtre"][$j]['filter-category']
+                    );
+                } else {
+                    array_push(
+                        $category,
+                        null
+                    );
+                }
+                if (array_key_exists('filter-location', $return["filtre"][$j])) {
+                    array_push(
+                        $location,
+                        $return["filtre"][$j]['filter-location']
+                    );
                 }
 
+                $sql_relation = "SELECT DISTINCT `object_id` FROM wp_term_relationships WHERE term_taxonomy_id=" . $return["filtre"][$j]['filter-category'] . " ";
+                $result_relation = mysqli_query($link, $sql_relation);
+
+                if (mysqli_num_rows($result_alert) > 0) {
+                    while ($row_relation = mysqli_fetch_assoc($result_relation)) {
+
+                        array_push($Big_offre, $row_relation["object_id"]);
+                        $id_offre = $row_relation["object_id"];
+
+                        /********************************************LA VERITE ************ */
+
+
+                        //$sql = "SELECT `post_title`,`post_modified`  FROM wp_posts WHERE ID=" . $JOBid . "   ";
+                        $one_by_sql = "SELECT `post_title`,`post_modified`,`post_name`  FROM wp_posts WHERE ID=" . $row_relation["object_id"] . "   ";
+                        $sth = mysqli_query($link, $one_by_sql);
+                        /*
+                        while ($r = mysqli_fetch_assoc($sth)) {
+                            $rows[] = [
+                                'date' => $r['post_modified'],
+                                'post_title' => $r['post_title'],
+                            ];
+                        }*/
+
+
+
+                        $link_sql = "SELECT DISTINCT `meta_value` FROM wp_postmeta WHERE post_id=" . $row_relation["object_id"] . " AND meta_key='_job_apply_url'  ";
+                        //$link_sql = "( SELECT DISTINCT meta_value FROM wp_postmeta WHERE post_id=".$id_offre."  AND meta_key='_job_apply_url') UNION (SELECT DISTINCT post_title,post_modified  FROM wp_posts WHERE ID=".$id_offre." ) ";
+
+                        $link_sth = mysqli_query($link, $link_sql);
+                        while (($link_r = mysqli_fetch_assoc($link_sth)) && ($r = mysqli_fetch_assoc($sth))) {
+                            //sleep(2);
+                            $post_title= (RemoveSpecialChar($r['post_title']));
+                            //var_dump($post_title);
+                            $rows[] = [
+                                'date' => $r['post_modified'],
+                                'post_title ' =>  $post_title,
+                                'link' => $link_r['meta_value'],
+                            ];
+                        }
+                        //array_push($offres, $rows);
+                    }
+                } else {
+                    # code...
+                }
+
+
+                $return["list_offres"] = $Big_offre;
             }
             $return["category"] = $category;
+            $return["location"] = $location;
+            $return["job_out_category"] = $rows;
 
             /*********************** */
-            
-
-
         } else {
             $return["error"] = true;
-            $return["message"] = 'No user_login found.';
+            $return["message"] = 'No job found.';
         }
     } else {
         $return["error"] = true;
@@ -86,7 +151,6 @@ if ($userID) {
     $return["message"] = 'Send all parameters.';
 }
 /*
-$Big_offre = array();
 $offre = array();
 
 
