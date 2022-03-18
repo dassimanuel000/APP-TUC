@@ -49,7 +49,7 @@ class _RootPageState extends State<RootPage> {
         items: <BottomNavBarItem>[
           BottomNavBarItem(
             title: 'Home',
-            icon: const Icon(Icons.view_comfy_alt),
+            icon: const Icon(Icons.dashboard_rounded),
             activeColor: Colors.white,
             inactiveColor: Colors.black,
             activeBackgroundColor: Colors.red.shade300,

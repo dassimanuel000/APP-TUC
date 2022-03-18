@@ -57,8 +57,16 @@ if ($userID) {
                 $result_filtre = mysqli_query($link, $sql_filtre);
 
                 while ($row = mysqli_fetch_assoc($result_filtre)) {
-
-                    array_push($filtres, json_decode(($row["meta_value"]), true));
+                    //$tempor_filtre = ;
+                    $title_filtre = array();
+                    $title_filtre =  [
+                        'title_filtre ' =>  $return["job_alert"][$i]["post_title"],
+                        'post_modified' => $return["job_alert"][$i]["post_modified"],
+                        
+                    ];
+                    $title_filtre +=json_decode(($row["meta_value"]), true);
+                    //array_merge($title_filtre, ($tempor_filtre));
+                    array_push($filtres, $title_filtre);
                 }
             }
             $return["filtre"] = $filtres;

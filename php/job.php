@@ -16,6 +16,18 @@ $JOBid = substr($hostname, strpos($hostname, "=") + 1);
 $link = mysqli_connect($dbhost, $dbuser, $dbpassword, $db);
 
 
+function RemoveSpecialChar($str)
+{
+
+    // Using str_ireplace() function 
+    // to replace the word 
+    $res = str_ireplace(array('\'', '"', ',', ';', '<', '>'), ' ', $str);
+    $res =iconv(mb_detect_encoding($res, mb_detect_order(), true), "UTF-8", $res);
+
+    // returning the result 
+    return $res;
+}
+
 $rows = array();
 $offres = array();
 
@@ -24,15 +36,20 @@ $offres = array();
     $sth = mysqli_query($link, $sql);
     $____rows = array();
     while ($r = mysqli_fetch_assoc($sth)) {
-        $rows['date'] = $r['post_modified'];
-        $rows['post_title'] = $r['post_title'];
+        $rows['date'] = RemoveSpecialChar($r['post_modified']);
+        $rows['post_title'] = RemoveSpecialChar($r['post_title']);
     }
 
 
     $link_sql = "SELECT `meta_value` FROM wp_postmeta WHERE post_id=" . $JOBid . " AND meta_key='_job_apply_url'  ";
     $link_sth = mysqli_query($link, $link_sql);
     while ($link_r = mysqli_fetch_assoc($link_sth)) {
-        $rows['link'] = $link_r['meta_value'];
+        if ($link_r) {
+            $rows['link'] = $link_r['meta_value'];
+        } else {
+            $rows['link'] = "https://trouver-un-candidat.com/liste-des-offres/?filter-title=".$JOBid."&filter-date-posted=all";
+        }
+        
     }
     array_push($offres, $rows);
 

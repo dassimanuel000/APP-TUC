@@ -15,6 +15,8 @@ import 'package:tuc/constants/color.dart';
 import 'package:tuc/screens/index.dart';
 import 'package:tuc/widget/widget.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:localstore/localstore.dart';
 
 const AndroidNotificationChannel channel = AndroidNotificationChannel(
     'high_importance_channel', // id
@@ -486,9 +488,11 @@ class _LoginPage extends State<LoginPage> {
   var _username = TextEditingController();
   var _password = TextEditingController();
 
+  final db = Localstore.instance;
+
   startLogin() async {
     // Get the token each time the application loads
-    String? _token = await FirebaseMessaging.instance.getToken();
+    /*String? _token = await FirebaseMessaging.instance.getToken();
 
     String apiurl = "https://trouver-un-candidat.com/test/login.php"; //api url
     //dont use http://localhost , because emulator don't get that address
@@ -499,7 +503,10 @@ class _LoginPage extends State<LoginPage> {
     var response = await http.post(Uri.parse(apiurl), body: {
       'user_login': user_login, //get the user_login text
       'user_pass': user_pass //get user_pass text
-    });
+    });*/
+    var url =
+        'https://trouver-un-candidat.com/test/login.php?user=${_password.text}&${_username.text}';
+    var response = await http.get(Uri.parse(url));
 
     if (response.statusCode == 200) {
       var jsondata = json.decode(response.body);
@@ -517,11 +524,18 @@ class _LoginPage extends State<LoginPage> {
           });
           //save the data returned from server
           //and navigate to home page
-          String uid = jsondata["ID"];
+          String uid = jsondata["uid"];
           String user_login = jsondata["user_login"];
           String user_email = jsondata["user_email"];
           print(user_login + user_email + uid);
+          final id = db.collection('todos').doc().id;
+
+// save the item
+          db.collection('users').doc(id).set(
+              {'id': uid, 'user_login': user_login, 'user_email': user_email});
           //user shablueAccent preference to save data
+          final data = await db.collection('todos').doc(id).get();
+          print(data);
         } else {
           showprogress = false; //don't show progress indicator
           error = true;
@@ -580,7 +594,7 @@ class _LoginPage extends State<LoginPage> {
           Container(
             margin: EdgeInsets.only(top: 10),
             child: Text(
-              "Sign In using Email and Password",
+              "Se Connecter avec votre identifiant et votre mail",
               style: TextStyle(color: Colors.white, fontSize: 15),
             ), //subtitle text
           ),
@@ -613,11 +627,9 @@ class _LoginPage extends State<LoginPage> {
             child: TextField(
               controller: _password, //set user_pass controller
               style: TextStyle(color: Colors.blue[100], fontSize: 20),
-              obscureText: true,
+              obscureText: false,
               decoration: myInputDecoration(
-                label: "Password",
-                icon: Icons.lock,
-              ),
+                  label: "Identifiant", icon: Icons.security_outlined),
               onChanged: (value) {
                 // change user_pass text
                 user_pass = value;
@@ -668,10 +680,10 @@ class _LoginPage extends State<LoginPage> {
             margin: EdgeInsets.only(top: 20),
             child: InkResponse(
                 onTap: () {
-                  //action on tap
+                  findID(context);
                 },
                 child: Text(
-                  "Forgot Password? Troubleshoot",
+                  "Où trouver son identifiant et son mail ?",
                   style: TextStyle(color: Colors.white, fontSize: 18),
                 )),
           )
@@ -1096,6 +1108,65 @@ Changelanguage(context) async {
                                     fontSize: 16),
                               ),
                             ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                )));
+      });
+}
+
+findID(context) async {
+  return showDialog(
+      context: context,
+      builder: (context) {
+        return Center(
+            child: Material(
+                type: MaterialType.transparency,
+                child: Container(
+                  height: 250.0,
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(15)),
+                  child: ListView(
+                    children: [
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 20, top: 10),
+                        child: Text(
+                          'Votre boîte Mail',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: "Open",
+                              fontSize: 16),
+                        ),
+                      ),
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(left: 20, top: 10, right: 20),
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.of(context).pop();
+                          },
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(12.0),
+                                child: Text(
+                                  "Après votre bilan de compétence et votre inscription sur la plateforme Trouver un candidat, Vous avez reçu un mail avec votre Identifiant ( Utilisez l'adresse mail sur laquelle vous avez reçu le mail d'inscription )",
+                                  style: TextStyle(
+                                      color: mPrimaryTextColor,
+                                      fontWeight: FontWeight.normal,
+                                      fontFamily: "Open",
+                                      fontSize: 16),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),

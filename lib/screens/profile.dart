@@ -30,6 +30,10 @@ class _ProfilePageState extends State<ProfilePage> {
     }
   }
 
+  dynamic doesntReturn() {
+    print("/////////////////////////////////////////////");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -358,10 +362,14 @@ class _ProfilePageState extends State<ProfilePage> {
                       ),
                       InkWell(
                         onTap: () {
-                          SweetAlert.show(context,
-                              title: "RECHARGER LES OFFRES",
-                              subtitle: "Vous pouvez voir les Offres",
-                              style: SweetAlertStyle.success);
+                          SweetAlert.show(
+                            context,
+                            title: "RECHARGER LES OFFRES",
+                            subtitle: "Vous pouvez voir les Offres",
+                            style: SweetAlertStyle.success,
+                            showCancelButton: false,
+                            onPress: doesntReturn(),
+                          );
                         },
                         child: Container(
                           padding: const EdgeInsets.symmetric(horizontal: 15),

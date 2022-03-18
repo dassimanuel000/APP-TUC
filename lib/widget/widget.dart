@@ -163,28 +163,19 @@ class _ProgressLifeState extends State<ProgressLife> {
   Widget build(BuildContext context) {
     return Container(
       child: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            ColorLoader3(
-              radius: 15.0,
-              dotRadius: 6.0,
+        child: Container(
+          height: 120,
+          width: 120,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: ExactAssetImage('assets/images/ic_launcher.png'),
+              fit: BoxFit.cover,
             ),
-            SizedBox(
-              width: 20,
-            ),
-            Container(
-              height: 120,
-              width: 120,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: ExactAssetImage('assets/images/ic_launcher.png'),
-                  fit: BoxFit.cover,
-                ),
-              ),
-              child: Text("0"),
-            ),
-          ],
+          ),
+          child: ColorLoader3(
+            radius: 15.0,
+            dotRadius: 6.0,
+          ),
         ),
       ),
     );

@@ -37,19 +37,26 @@ class _DashboardState extends State<Dashboard> {
         children: [
           search(keyword),
           SizedBox(
-            height: 10.0,
+            height: 1.0,
           ),
           tile("Alertes Emploi"),
           SizedBox(
-            height: 10.0,
+            height: 1.0,
           ),
           Container(
-              margin: EdgeInsets.only(bottom: 20),
+              margin: EdgeInsets.only(bottom: 5),
               child: Container(
                 padding: EdgeInsets.all(15.0),
                 height: MediaQuery.of(context).size.width,
                 child: new View(),
               )),
+          SizedBox(
+            height: 2.0,
+          ),
+          tile("Créer une Alerte"),
+          SizedBox(
+            height: 2.0,
+          ),
         ],
       ),
     );
@@ -73,24 +80,27 @@ class _DashboardState extends State<Dashboard> {
       child: Row(
         children: [
           Expanded(
-            child: TextField(
-              controller: keyword, //set user_pass controller
-              decoration: InputDecoration(
-                hintText: 'Search..',
-                border: InputBorder.none,
-                isDense: true,
-                contentPadding: EdgeInsets.all(0),
+            child: Padding(
+              padding: const EdgeInsets.only(left: 15.0),
+              child: TextField(
+                controller: keyword, //set user_pass controller
+                decoration: InputDecoration(
+                  hintText: 'Search..',
+                  border: InputBorder.none,
+                  isDense: true,
+                  contentPadding: EdgeInsets.all(0),
+                ),
+                textAlignVertical: TextAlignVertical.center,
+                onSubmitted: (value) {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Search(
+                          title: keyword.text,
+                        ),
+                      ));
+                },
               ),
-              textAlignVertical: TextAlignVertical.center,
-              onSubmitted: (value) {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Search(
-                        text: keyword.text,
-                      ),
-                    ));
-              },
             ),
           ),
           Container(
@@ -109,7 +119,7 @@ class _DashboardState extends State<Dashboard> {
                     context,
                     MaterialPageRoute(
                       builder: (context) => Search(
-                        text: keyword.text,
+                        title: keyword.text,
                       ),
                     ));
               }),
@@ -229,7 +239,7 @@ class _DashboardState extends State<Dashboard> {
                   context,
                   MaterialPageRoute(
                     builder: (context) => Search(
-                      text: "0",
+                      title: "0",
                     ),
                   ));
               print("click search");
@@ -246,7 +256,7 @@ class View extends StatelessWidget {
     var url = 'https://www.trouver-un-candidat.com/test/index.php?user=100';
     var response = await http.get(Uri.parse(url));
     Map<String, dynamic> map = json.decode(response.body);
-    List<dynamic> data = map["job_alert"];
+    List<dynamic> data = map["filtre"];
     return data;
   }
 
@@ -268,7 +278,8 @@ class View extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) => AlertList(
-                              text: list[index]['post_author'],
+                              category: list[index]['filter-category'],
+                              location: list[index]['filter-location'],
                             ),
                           ));
                     },
@@ -276,9 +287,9 @@ class View extends StatelessWidget {
                       child: Image.asset('assets/images/ic_launcher.png'),
                       backgroundColor: Colors.white,
                     ),
-                    title: Text("${list[index]['post_title']}"),
-                    subtitle:
-                        Text("Fait le : " + "${list[index]['post_modified']}"),
+                    title: Text("${list[index]['title_filtre ']}"),
+                    subtitle: Text(
+                        "Créée  le : " + "${list[index]['post_modified']}"),
                     trailing: Icon(Icons.arrow_forward_ios_rounded),
                   );
                 })

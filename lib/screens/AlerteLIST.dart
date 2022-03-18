@@ -1,13 +1,19 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:tuc/constants/color.dart';
 import 'package:tuc/widget/widget.dart';
 import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
 
 class AlertList extends StatefulWidget {
-  final String text;
-  const AlertList({Key? key, required this.text}) : super(key: key);
+  final String category;
+
+  final String location;
+  const AlertList({Key? key, required this.category, required this.location})
+      : super(key: key);
 
   @override
   _SearchState createState() => _SearchState();
@@ -30,28 +36,34 @@ class _SearchState extends State<AlertList> {
 
   Future getData() async {
     var url =
-        'https://www.trouver-un-candidat.com/test/index.php?user=${widget.text}';
+        'https://trouver-un-candidat.com/test/alert.php?category=${widget.category}&${widget.location}';
     var response = await http.get(Uri.parse(url));
     Map<String, dynamic> map = json.decode(response.body);
-    List<dynamic> data = map["job_out_category"];
+    List<dynamic> data = map["job"];
     return data;
+  }
+
+  String _text(String link) {
+    if (link.contains("indeed")) {
+      return "https://i.ibb.co/8j6XTC7/indeed-small.png";
+    } else {
+      return "https://i.ibb.co/QP8jHZ7/ic-launcher.png";
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: navigatorpop(context),
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Container(
-          height: MediaQuery.of(context).size.height,
-          child: ListView(
-            children: [
-              FutureBuilder(
-                future: getData(),
-                builder: (context, AsyncSnapshot snapshot) {
-                  if (snapshot.hasError) print(snapshot.error);
-                  /*String mainString = "toyota allion 260 2010";
+      body: Container(
+        height: MediaQuery.of(context).size.width + 200.0,
+        child: ListView(
+          children: [
+            FutureBuilder(
+              future: getData(),
+              builder: (context, AsyncSnapshot snapshot) {
+                if (snapshot.hasError) print(snapshot.error);
+                /*String mainString = "toyota allion 260 2010";
                   String substring = "allion";
 
                   if (mainString.contains(substring)) {
@@ -59,46 +71,67 @@ class _SearchState extends State<AlertList> {
                   } else {
                     print("falses");
                   }*/
-                  return snapshot.hasData
-                      ? ListView.builder(
-                          itemCount: snapshot.data.length,
-                          itemBuilder: (BuildContext context, int index) {
-                            List list = snapshot.data;
-                            //list = list['job_alert'];
-                            return ListTile(
-                              onTap: () {
-                                _launchURL(list[index]['link']);
-                              },
-                              leading: CircleAvatar(
-                                child: Image.asset(
-                                    'assets/images/ic_launcher.png'),
-                                backgroundColor: Colors.white,
-                              ),
-                              title: Text("${list[index]['post_title ']}"),
-                              subtitle: Text(
-                                  "Posté le : " + "${list[index]['date']}"),
-                              trailing: TextButton(
-                                  style: ButtonStyle(
-                                    overlayColor: MaterialStateProperty
-                                        .resolveWith<Color?>(
-                                            (Set<MaterialState> states) {
-                                      if (states
-                                          .contains(MaterialState.focused))
-                                        return Colors.blue;
-                                      return null; // Defer to the widget's default.
-                                    }),
-                                  ),
-                                  onPressed: () {
+                return snapshot.hasData
+                    ? SingleChildScrollView(
+                        physics: ScrollPhysics(),
+                        child: Column(children: <Widget>[
+                          ListView.builder(
+                              shrinkWrap: true,
+                              physics: NeverScrollableScrollPhysics(),
+                              scrollDirection: Axis.vertical,
+                              itemCount: snapshot.data.length,
+                              itemBuilder: (BuildContext context, int index) {
+                                List list = snapshot.data;
+                                print(snapshot.data.length);
+                                //list = list['job_alert'];
+                                return ListTile(
+                                  onTap: () {
                                     _launchURL(list[index]['link']);
                                   },
-                                  child: Text('Postulez')),
-                            );
-                          })
-                      : ProgressLife();
-                },
-              ),
-            ],
-          ),
+                                  leading: CircleAvatar(
+                                    child: Image.network(
+                                        _text(list[index]['link'])),
+                                    backgroundColor: Colors.white,
+                                  ),
+                                  title: Text("${list[index]['post_title ']}"),
+                                  subtitle: Text(
+                                      "Posté le : " + "${list[index]['date']}"),
+                                  trailing: TextButton(
+                                      style: ButtonStyle(
+                                        backgroundColor: MaterialStateProperty
+                                            .resolveWith<Color?>(
+                                          (Set<MaterialState> states) {
+                                            if (states.contains(
+                                                MaterialState.pressed))
+                                              return Theme.of(context)
+                                                  .colorScheme
+                                                  .primary
+                                                  .withOpacity(0.5);
+                                            return mButtonEmailColor; // Use the component's default.
+                                          },
+                                        ),
+                                        overlayColor: MaterialStateProperty
+                                            .resolveWith<Color?>(
+                                                (Set<MaterialState> states) {
+                                          Colors
+                                              .white; // Defer to the widget's default.
+                                        }),
+                                      ),
+                                      onPressed: () {
+                                        _launchURL(list[index]['link']);
+                                      },
+                                      child: Text(
+                                        'Postulez',
+                                        style:
+                                            TextStyle(color: mBackgroundColor),
+                                      )),
+                                );
+                              })
+                        ]))
+                    : ProgressLife();
+              },
+            ),
+          ],
         ),
       ),
     );
