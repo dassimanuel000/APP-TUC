@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors, sized_box_for_whitespace, avoid_print, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, use_key_in_widget_constructors, must_be_immutable, unnecessary_new, override_on_non_overriding_member, deprecated_member_use, prefer_final_fields, non_constant_identifier_names
+// ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors, sized_box_for_whitespace, avoid_print, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, use_key_in_widget_constructors, must_be_immutable, unnecessary_new, override_on_non_overriding_member, deprecated_member_use, prefer_final_fields, non_constant_identifier_names, unnecessary_null_comparison
 
 import 'dart:convert';
 import 'dart:math';
@@ -16,7 +16,6 @@ import 'package:tuc/screens/index.dart';
 import 'package:tuc/widget/widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:localstore/localstore.dart';
 
 const AndroidNotificationChannel channel = AndroidNotificationChannel(
     'high_importance_channel', // id
@@ -35,6 +34,7 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   print('A Background message just showed up :  ${message.messageId}');
 }
 
+late SharedPreferences localStorage;
 Future<void> main() async {
   // firebase App initialize
   WidgetsFlutterBinding.ensureInitialized();
@@ -60,15 +60,27 @@ Future<void> main() async {
 }
 
 class MyApp extends StatelessWidget {
+  String uid = '';
+
+  _loadCounter() async {
+    SharedPreferences localStorage = await SharedPreferences.getInstance();
+
+    uid = (localStorage.getString('uid') ?? '');
+    return uid;
+  }
+
+  Future<SharedPreferences> localStorage = SharedPreferences.getInstance();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Push Notification',
+      title: 'Trouver un candidat',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(title: 'Flutter Push Notification'),
+      home: _loadCounter().toString() == null
+          ? MyHomePage(title: 'Trouver un candidat')
+          : RootPage(),
     );
   }
 }
@@ -488,7 +500,9 @@ class _LoginPage extends State<LoginPage> {
   var _username = TextEditingController();
   var _password = TextEditingController();
 
-  final db = Localstore.instance;
+  static Future init() async {
+    localStorage = await SharedPreferences.getInstance();
+  }
 
   startLogin() async {
     // Get the token each time the application loads
@@ -528,14 +542,12 @@ class _LoginPage extends State<LoginPage> {
           String user_login = jsondata["user_login"];
           String user_email = jsondata["user_email"];
           print(user_login + user_email + uid);
-          final id = db.collection('todos').doc().id;
+          await init();
 
-// save the item
-          db.collection('users').doc(id).set(
-              {'id': uid, 'user_login': user_login, 'user_email': user_email});
-          //user shablueAccent preference to save data
-          final data = await db.collection('todos').doc(id).get();
-          print(data);
+          localStorage.setString('uid', uid.toString());
+          localStorage.setString('email', _username.text.toString());
+          localStorage.setString('password', _password.text.toString());
+          if (localStorage != null) print(localStorage.get('uid'));
         } else {
           showprogress = false; //don't show progress indicator
           error = true;

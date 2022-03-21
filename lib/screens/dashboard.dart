@@ -3,12 +3,15 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tuc/constants/color.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 import 'package:tuc/screens/AlerteLIST.dart';
 import 'package:tuc/screens/searchPage.dart';
 import 'package:tuc/widget/widget.dart';
+
+String uid = '';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key, required this.title}) : super(key: key);
@@ -26,6 +29,14 @@ class _DashboardState extends State<Dashboard> {
   @override
   void initState() {
     super.initState();
+    _loadCounter();
+  }
+
+  _loadCounter() async {
+    SharedPreferences localStorage = await SharedPreferences.getInstance();
+    setState(() {
+      uid = (localStorage.getString('uid') ?? '');
+    });
   }
 
   @override
@@ -253,7 +264,7 @@ class _DashboardState extends State<Dashboard> {
 
 class View extends StatelessWidget {
   Future getData() async {
-    var url = 'https://www.trouver-un-candidat.com/test/index.php?user=100';
+    var url = 'https://www.trouver-un-candidat.com/test/index.php?user=${uid}';
     var response = await http.get(Uri.parse(url));
     Map<String, dynamic> map = json.decode(response.body);
     List<dynamic> data = map["filtre"];

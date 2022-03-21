@@ -3,10 +3,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sweetalert/sweetalert.dart';
 import 'package:tuc/constants/color.dart';
+import 'package:tuc/main.dart';
 import 'package:tuc/screens/FDrawer.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+late SharedPreferences localStorage;
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -370,6 +374,13 @@ class _ProfilePageState extends State<ProfilePage> {
                             showCancelButton: false,
                             onPress: doesntReturn(),
                           );
+                          remove() async {
+                            localStorage.remove('uid');
+                          }
+
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) =>
+                                  MyHomePage(title: 'Trouver un candidat')));
                         },
                         child: Container(
                           padding: const EdgeInsets.symmetric(horizontal: 15),

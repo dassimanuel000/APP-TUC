@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_new, unnecessary_const
+// ignore_for_file: unnecessary_new, unnecessary_const, must_be_immutable
 
 import 'package:bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
@@ -6,21 +6,9 @@ import 'package:tuc/screens/dashboard.dart';
 import 'package:tuc/screens/listJob.dart';
 import 'package:tuc/screens/profile.dart';
 
-class RootPage extends StatefulWidget {
-  const RootPage({Key? key}) : super(key: key);
-
-  @override
-  _RootPageState createState() => _RootPageState();
-}
-
-class _RootPageState extends State<RootPage> {
+class RootPage extends StatelessWidget {
+  //const ({ Key? key }) : super(key: key);
   int _currentIndex = 0;
-
-  @override
-  void initState() {
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +32,7 @@ class _RootPageState extends State<RootPage> {
         showElevation: true,
         selectedIndex: _currentIndex,
         onItemSelected: (index) {
-          setState(() => _currentIndex = index);
+          _currentIndex = index;
         },
         items: <BottomNavBarItem>[
           BottomNavBarItem(
