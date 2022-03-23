@@ -183,14 +183,10 @@ class News extends StatelessWidget {
                                             CrossAxisAlignment.start,
                                         children: [
                                           SingleChildScrollView(
-                                            scrollDirection: Axis.vertical,
                                             child: Column(
                                               children: [
                                                 Text(
                                                   "${list[index]['_title']}",
-                                                  overflow:
-                                                      TextOverflow.ellipsis,
-                                                  maxLines: 1,
                                                   style:
                                                       TextStyle(fontSize: 14.0),
                                                 ),
@@ -204,73 +200,77 @@ class News extends StatelessWidget {
                                             maxLines: 3,
                                             style: TextStyle(fontSize: 8.0),
                                           ),
-                                          SizedBox(
-                                            width: MediaQuery.of(context)
-                                                    .size
-                                                    .width -
-                                                136,
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              children: [
-                                                Row(
-                                                  children: [
-                                                    RatingBar.builder(
-                                                      itemSize: 16,
-                                                      initialRating:
-                                                          double.parse(
-                                                        "4.8",
-                                                      ),
-                                                      minRating: 1,
-                                                      direction:
-                                                          Axis.horizontal,
-                                                      itemCount: 5,
-                                                      itemPadding:
-                                                          EdgeInsets.zero,
-                                                      itemBuilder:
-                                                          (context, _) =>
-                                                              const Icon(
-                                                        Icons.star,
-                                                        color: kYellowColor,
-                                                      ),
-                                                      onRatingUpdate: (rating) {
-                                                        debugPrint(
-                                                            rating.toString());
-                                                      },
-                                                      unratedColor:
-                                                          contentTextColor,
-                                                    ),
-                                                    const SizedBox(
-                                                      width: 4,
-                                                    ),
-                                                  ],
-                                                ),
-                                                Container(
-                                                  height: 24,
-                                                  padding: const EdgeInsets
-                                                      .symmetric(
-                                                    horizontal: 13,
-                                                    vertical: 3,
-                                                  ),
-                                                  decoration: BoxDecoration(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            4),
-                                                    color: successColor,
-                                                  ),
-                                                  child: Text(
-                                                    'Read More',
-                                                    style: Theme.of(context)
-                                                        .textTheme
-                                                        .labelSmall!
-                                                        .copyWith(
-                                                          color:
-                                                              backgroundWhite,
+                                          SingleChildScrollView(
+                                            scrollDirection: Axis.vertical,
+                                            child: SizedBox(
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width -
+                                                  136,
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
+                                                children: [
+                                                  Row(
+                                                    children: [
+                                                      RatingBar.builder(
+                                                        itemSize: 16,
+                                                        initialRating:
+                                                            double.parse(
+                                                          "4.5",
                                                         ),
+                                                        minRating: 1,
+                                                        direction:
+                                                            Axis.horizontal,
+                                                        itemCount: 5,
+                                                        itemPadding:
+                                                            EdgeInsets.zero,
+                                                        itemBuilder:
+                                                            (context, _) =>
+                                                                const Icon(
+                                                          Icons.star,
+                                                          color: kYellowColor,
+                                                        ),
+                                                        onRatingUpdate:
+                                                            (rating) {
+                                                          debugPrint(rating
+                                                              .toString());
+                                                        },
+                                                        unratedColor:
+                                                            contentTextColor,
+                                                      ),
+                                                      const SizedBox(
+                                                        width: 4,
+                                                      ),
+                                                    ],
                                                   ),
-                                                )
-                                              ],
+                                                  Container(
+                                                    height: 18,
+                                                    padding: const EdgeInsets
+                                                        .symmetric(
+                                                      horizontal: 13,
+                                                      vertical: 3,
+                                                    ),
+                                                    decoration: BoxDecoration(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              4),
+                                                      color: successColor,
+                                                    ),
+                                                    child: Text(
+                                                      'Read More',
+                                                      style: Theme.of(context)
+                                                          .textTheme
+                                                          .labelSmall!
+                                                          .copyWith(
+                                                            color:
+                                                                backgroundWhite,
+                                                          ),
+                                                    ),
+                                                  )
+                                                ],
+                                              ),
                                             ),
                                           )
                                         ],

@@ -144,21 +144,17 @@ AppBar navigatorpop(BuildContext context) {
   var keyword = TextEditingController();
 
   return AppBar(
-    backgroundColor: mBackgroundColor,
+    backgroundColor: Colors.white,
     elevation: 0,
-    leading: InkWell(
-      child: Icon(
-        Icons.arrow_back_ios,
-        color: Colors.black87,
-      ),
-      onTap: () {
+    leading: IconButton(
+      icon: const Icon(Icons.arrow_back_ios, color: Colors.black87),
+      onPressed: () {
         Navigator.pop(context);
       },
+      tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
     ),
-    centerTitle: false,
-    automaticallyImplyLeading: false,
-    actions: <Widget>[
-      TextField(
+    title: Center(
+      child: TextField(
         controller: keyword, //set user_pass controller
         decoration: InputDecoration(
           hintText: 'Search..',
@@ -177,6 +173,26 @@ AppBar navigatorpop(BuildContext context) {
               ));
         },
       ),
+    ),
+    actions: <Widget>[
+      InkWell(
+        child: Icon(
+          Icons.search,
+          color: Colors.black87,
+        ),
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => Search(
+                  title: keyword.text,
+                ),
+              ));
+          print("click search");
+        },
+      ),
+      SizedBox(width: 10),
+      SizedBox(width: 20)
     ],
   );
 }
