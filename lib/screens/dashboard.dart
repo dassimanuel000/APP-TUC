@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, non_constant_identifier_names, unused_import, avoid_print, unused_element, unused_local_variable, unnecessary_null_comparison
 
 import 'dart:convert';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -10,6 +11,8 @@ import 'package:intl/intl.dart';
 import 'package:tuc/screens/AlerteLIST.dart';
 import 'package:tuc/screens/searchPage.dart';
 import 'package:tuc/widget/widget.dart';
+
+import 'package:tuc/screens/FDrawer.dart';
 
 String uid = '';
 
@@ -37,13 +40,17 @@ class _DashboardState extends State<Dashboard> {
     setState(() {
       uid = (localStorage.getString('uid') ?? '');
     });
+    await FirebaseMessaging.instance.subscribeToTopic('${uid}');
   }
 
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: mBackgroundColor,
       appBar: _Header(),
+      key: _scaffoldKey,
+      drawer: MyDrawer(),
       body: ListView(
         children: [
           search(keyword),
@@ -58,13 +65,12 @@ class _DashboardState extends State<Dashboard> {
               margin: EdgeInsets.only(bottom: 5),
               child: Container(
                 padding: EdgeInsets.all(15.0),
-                height: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.width / 2,
                 child: new View(),
               )),
           SizedBox(
             height: 2.0,
           ),
-          tile("Créer une Alerte"),
           SizedBox(
             height: 2.0,
           ),
@@ -141,7 +147,6 @@ class _DashboardState extends State<Dashboard> {
 
   Widget tile(String title) {
     return Container(
-      margin: EdgeInsets.all(16),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Text(
@@ -229,16 +234,14 @@ class _DashboardState extends State<Dashboard> {
   AppBar _Header() => AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: Image.asset('./assets/images/tuc.png'),
-        leading: InkWell(
-          child: Icon(
-            Icons.menu,
-            color: Colors.black87,
-          ),
-          onTap: () {
-            print("click menu");
+        leading: IconButton(
+          icon: const Icon(Icons.menu, color: Colors.black87),
+          onPressed: () {
+            _scaffoldKey.currentState?.openDrawer();
           },
+          tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
         ),
+        title: Image.asset('./assets/images/tuc.png'),
         actions: <Widget>[
           InkWell(
             child: Icon(
@@ -250,7 +253,7 @@ class _DashboardState extends State<Dashboard> {
                   context,
                   MaterialPageRoute(
                     builder: (context) => Search(
-                      title: "0",
+                      title: "job",
                     ),
                   ));
               print("click search");

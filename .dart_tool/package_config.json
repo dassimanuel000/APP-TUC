@@ -182,6 +182,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flutter_rating_bar",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_rating_bar-4.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_sequence_animation",
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_sequence_animation-3.0.1",
       "packageUri": "lib/",
@@ -530,7 +536,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2022-03-18T15:41:46.571383Z",
+  "generated": "2022-03-23T12:38:51.758826Z",
   "generator": "pub",
   "generatorVersion": "2.16.1"
 }

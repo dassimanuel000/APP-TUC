@@ -1,7 +1,10 @@
-// ignore_for_file: prefer_const_constructors, avoid_print, unused_element, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, avoid_print, unused_element, prefer_const_literals_to_create_immutables, unnecessary_import, unused_import, must_be_immutable
 
+import 'dart:convert';
+import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tuc/constants/color.dart';
 import 'package:tuc/screens/dashboard.dart';
 
@@ -9,6 +12,8 @@ import 'package:flutter/services.dart';
 import 'dart:math';
 
 import 'package:provider/provider.dart';
+import 'package:tuc/screens/searchPage.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../main.dart';
 
@@ -32,6 +37,7 @@ class RoundedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     // ignore: deprecated_member_use
     return FlatButton(
+      onLongPress: press,
       onPressed: press,
       color: backgroundColor,
       shape: RoundedRectangleBorder(
@@ -135,6 +141,8 @@ class HaveAccount extends StatelessWidget {
 }
 
 AppBar navigatorpop(BuildContext context) {
+  var keyword = TextEditingController();
+
   return AppBar(
     backgroundColor: mBackgroundColor,
     elevation: 0,
@@ -149,7 +157,27 @@ AppBar navigatorpop(BuildContext context) {
     ),
     centerTitle: false,
     automaticallyImplyLeading: false,
-    actions: <Widget>[],
+    actions: <Widget>[
+      TextField(
+        controller: keyword, //set user_pass controller
+        decoration: InputDecoration(
+          hintText: 'Search..',
+          border: InputBorder.none,
+          isDense: true,
+          contentPadding: EdgeInsets.all(0),
+        ),
+        textAlignVertical: TextAlignVertical.center,
+        onSubmitted: (value) {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => Search(
+                  title: keyword.text,
+                ),
+              ));
+        },
+      ),
+    ],
   );
 }
 

@@ -8,6 +8,7 @@ import 'package:sweetalert/sweetalert.dart';
 import 'package:tuc/constants/color.dart';
 import 'package:tuc/main.dart';
 import 'package:tuc/screens/FDrawer.dart';
+import 'package:tuc/widget/widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 late SharedPreferences localStorage;
@@ -20,6 +21,8 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
   Future<void> _launchURL(String url) async {
     if (await canLaunch(url)) {
       await launch(
@@ -35,14 +38,20 @@ class _ProfilePageState extends State<ProfilePage> {
   }
 
   dynamic doesntReturn() {
-    print("/////////////////////////////////////////////");
+    remove() async {
+      localStorage.remove('uid');
+    }
+
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => MyHomePage(title: 'Trouver un candidat')));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: FDrawer(),
-        backgroundColor: backgroundWhite,
+        key: _scaffoldKey,
+        backgroundColor: mBackgroundColor,
+        drawer: MyDrawer(),
         body: SingleChildScrollView(
           child: ConstrainedBox(
             constraints: BoxConstraints(),
@@ -93,7 +102,9 @@ class _ProfilePageState extends State<ProfilePage> {
                                 child: IconButton(
                                     icon: Icon(Icons.menu,
                                         color: primaryTextColorDark),
-                                    onPressed: () {}),
+                                    onPressed: () {
+                                      _scaffoldKey.currentState?.openDrawer();
+                                    }),
                               ),
                             ),
                           ),
@@ -374,13 +385,6 @@ class _ProfilePageState extends State<ProfilePage> {
                             showCancelButton: false,
                             onPress: doesntReturn(),
                           );
-                          remove() async {
-                            localStorage.remove('uid');
-                          }
-
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) =>
-                                  MyHomePage(title: 'Trouver un candidat')));
                         },
                         child: Container(
                           padding: const EdgeInsets.symmetric(horizontal: 15),

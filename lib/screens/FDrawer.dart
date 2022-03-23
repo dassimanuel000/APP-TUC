@@ -1,15 +1,18 @@
-// ignore_for_file: avoid_unnecessary_containers, sized_box_for_whitespace, use_key_in_widget_constructors, file_names, prefer_const_constructors
+// ignore_for_file: avoid_unnecessary_containers, sized_box_for_whitespace, use_key_in_widget_constructors, file_names, prefer_const_constructors, must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tuc/constants/color.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class FDrawer extends StatefulWidget {
+class MyDrawer extends StatefulWidget {
+  const MyDrawer({Key? key}) : super(key: key);
+
   @override
-  _FDrawerState createState() => _FDrawerState();
+  _MyDrawerState createState() => _MyDrawerState();
 }
 
-class _FDrawerState extends State<FDrawer> with TickerProviderStateMixin {
+class _MyDrawerState extends State<MyDrawer> with TickerProviderStateMixin {
   late AnimationController _controller;
 
   @override
@@ -24,201 +27,100 @@ class _FDrawerState extends State<FDrawer> with TickerProviderStateMixin {
     _controller.dispose();
   }
 
-  late Future<void> _launched;
-  String _url = '';
-
-  Future<void> _launchInWebViewOrVC(String url) async {
+  Future<void> _launchURL(String url) async {
     if (await canLaunch(url)) {
       await launch(
         url,
-        forceWebView: true,
         forceSafariVC: true,
-        headers: <String, String>{'egaz ': 'egaz'},
+        forceWebView: true,
+        enableJavaScript: true,
+        headers: <String, String>{'my_header_key': 'my_header_value'},
       );
     } else {
       throw 'Could not launch $url';
     }
   }
 
+  String uid = '';
+  String user_email = '';
+  String user_login = '';
+  _loadCounter() async {
+    SharedPreferences localStorage = await SharedPreferences.getInstance();
+
+    uid = (localStorage.getString('uid') ?? '');
+    user_email = (localStorage.getString('user_email') ?? '');
+    user_login = (localStorage.getString('user_login') ?? '');
+  }
+
+  @override
+  void setState(VoidCallback fn) {
+    // ignore: todo
+    // TODO: implement setState
+    super.setState(fn);
+    _loadCounter();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width * 0.8,
-      decoration: BoxDecoration(color: primaryBackgroundColor),
-      child: Container(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.only(top: 40.0),
-              child: Container(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.only(top: 8, left: 4),
-                      child: Text(
-                        'name user',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          color: primaryTextColor,
-                          fontSize: 18,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+    return Drawer(
+      child: ListView(
+        children: <Widget>[
+          UserAccountsDrawerHeader(
+            accountName: Text("${user_login}"),
+            accountEmail: Text("${user_email}"),
+            currentAccountPicture: CircleAvatar(
+              child: Image.network("https://i.ibb.co/QP8jHZ7/ic-launcher.png"),
             ),
-            const SizedBox(
-              height: 4,
+          ),
+          ListTile(
+            title: Text("Profils"),
+            trailing: Icon(
+              Icons.arrow_forward_ios,
+              color: mButtonFacebookColor,
             ),
-            Divider(
-              height: 1,
-              color: primaryTextColor.withOpacity(0.6),
+            onLongPress: () {},
+            onTap: () {
+              _launchURL(
+                  "https://trouver-un-candidat.com/candidat/${user_login}");
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: Text("Website"),
+            trailing: Icon(
+              Icons.ondemand_video,
+              color: mButtonFacebookColor,
             ),
-            Expanded(
-              child: ListView(
-                physics: const BouncingScrollPhysics(),
-                padding: const EdgeInsets.all(0.0),
-                children: [
-                  InkWell(
-                    splashColor: Colors.grey.withOpacity(0.1),
-                    highlightColor: Colors.transparent,
-                    onTap: () {},
-                    child: Stack(
-                      children: <Widget>[
-                        Container(
-                          padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
-                          child: Row(
-                            children: <Widget>[
-                              Container(
-                                width: 6.0,
-                                height: 46.0,
-                              ),
-                              const Padding(
-                                padding: EdgeInsets.all(4.0),
-                              ),
-                              Icon(
-                                Icons.person_pin,
-                                color: primaryBlue,
-                              ),
-                              const Padding(
-                                padding: EdgeInsets.all(4.0),
-                              ),
-                              Text(
-                                'labelName',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 16,
-                                  color: primaryTextColor,
-                                ),
-                                textAlign: TextAlign.left,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+            onLongPress: () {},
+            onTap: () {
+              _launchURL("https://trouver-un-candidat.com/");
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: Text("I Need Help"),
+            trailing: Icon(
+              Icons.collections,
+              color: mButtonFacebookColor,
             ),
-            Divider(
-              height: 1,
-              color: primaryTextColor.withOpacity(0.6),
+            onLongPress: () {},
+            onTap: () {
+              _launchURL(
+                  "https://www.youtube.com/channel/UCAtFP6U10RSNtLUsE6PU4fg");
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: Text("Close"),
+            trailing: Icon(
+              Icons.close,
+              color: Colors.red.shade300,
             ),
-            Column(
-              children: <Widget>[
-                ListTile(
-                  title: Text(
-                    'Website egaz-cm',
-                    style: TextStyle(
-                      fontFamily: 'Roboto',
-                      fontWeight: FontWeight.w600,
-                      fontSize: 16,
-                      color: primaryTextColorDark,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                  trailing: Icon(
-                    Icons.power_settings_new,
-                    color: Colors.red,
-                  ),
-                  onTap: () {
-                    _url = "http://localhost:8000/";
-                    _launched = _launchInWebViewOrVC(_url);
-                  },
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).padding.bottom,
-                )
-              ],
-            ),
-            Divider(
-              height: 1,
-              color: primaryTextColor.withOpacity(0.6),
-            ),
-            Column(
-              children: <Widget>[
-                ListTile(
-                  title: Text(
-                    'Dark Mode ',
-                    style: TextStyle(
-                      fontFamily: 'Roboto',
-                      fontWeight: FontWeight.w600,
-                      fontSize: 16,
-                      color: primaryTextColorDark,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                  trailing: Icon(
-                    Icons.lightbulb_outline,
-                    color: backgroundWhite,
-                  ),
-                  onTap: () {},
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).padding.bottom,
-                )
-              ],
-            ),
-            Divider(
-              height: 1,
-              color: primaryTextColor.withOpacity(0.6),
-            ),
-            Column(
-              children: <Widget>[
-                ListTile(
-                  title: Text(
-                    'Sign Out',
-                    style: TextStyle(
-                      fontFamily: 'Roboto',
-                      fontWeight: FontWeight.w600,
-                      fontSize: 16,
-                      color: primaryTextColorDark,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                  trailing: Icon(
-                    Icons.power_settings_new,
-                    color: Colors.red,
-                  ),
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).padding.bottom,
-                )
-              ],
-            ),
-          ],
-        ),
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+          ),
+        ],
       ),
     );
   }

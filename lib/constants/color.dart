@@ -12,9 +12,12 @@ Color mButtonEmailColor = Color(0xFF4285F4);
 
 Color mButtonFacebookColor = Color(0xFF0568e0);
 
+const kYellowColor = Color(0xFFFFE848);
 Color mButtonAppleColor = Color(0xFF001000);
 
 Color mBorderColor = Color(0xFFE8E8E8);
+
+Color successColor = Color(0xFF00d350);
 
 const kTitleStyle = TextStyle(
     fontSize: 24, color: Color(0xFF01002f), fontWeight: FontWeight.bold);

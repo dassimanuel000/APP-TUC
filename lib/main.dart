@@ -56,20 +56,26 @@ Future<void> main() async {
 
   //await FirebaseMessaging.instance.subscribeToTopic('news');
 
-  runApp(MyApp());
+  SharedPreferences localStorage = await SharedPreferences.getInstance();
+  var uid = localStorage.getString('uid');
+  runApp(MaterialApp(
+    home: uid == null ? MyApp() : RootPage(),
+  ));
+
+  //runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   String uid = '';
 
-  _loadCounter() async {
+  /*_loadCounter() async {
     SharedPreferences localStorage = await SharedPreferences.getInstance();
 
     uid = (localStorage.getString('uid') ?? '');
     return uid;
-  }
+  }*/
 
-  Future<SharedPreferences> localStorage = SharedPreferences.getInstance();
+  //Future<SharedPreferences> localStorage = SharedPreferences.getInstance();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -78,9 +84,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: _loadCounter().toString() == null
-          ? MyHomePage(title: 'Trouver un candidat')
-          : RootPage(),
+      home: MyHomePage(title: 'Trouver un candidat'),
     );
   }
 }
@@ -545,9 +549,11 @@ class _LoginPage extends State<LoginPage> {
           await init();
 
           localStorage.setString('uid', uid.toString());
-          localStorage.setString('email', _username.text.toString());
-          localStorage.setString('password', _password.text.toString());
+          localStorage.setString('user_email', user_email.toString());
+          localStorage.setString('user_login', user_login.toString());
           if (localStorage != null) print(localStorage.get('uid'));
+          await FirebaseMessaging.instance.subscribeToTopic('${uid}');
+          SuccesLogin(context);
         } else {
           showprogress = false; //don't show progress indicator
           error = true;
@@ -708,12 +714,12 @@ class _LoginPage extends State<LoginPage> {
     return InputDecoration(
       hintText: label, //show label as placeholder
       hintStyle:
-          TextStyle(color: Colors.blue[100], fontSize: 20), //hint text style
+          TextStyle(color: mPrimaryTextColor, fontSize: 20), //hint text style
       prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 10),
           child: Icon(
             icon,
-            color: Colors.blue[100],
+            color: mButtonFacebookColor,
           )
           //padding and icon for prefix
           ),
@@ -729,7 +735,7 @@ class _LoginPage extends State<LoginPage> {
           borderSide:
               BorderSide(color: Colors.blue[200]!, width: 1)), //focus border
 
-      fillColor: Color.fromRGBO(251, 140, 0, 0.5),
+      fillColor: mBackgroundColor,
       filled: true, //set true if you want to show input background
     );
   }
@@ -1178,6 +1184,98 @@ findID(context) async {
                                       fontSize: 16),
                                 ),
                               ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                )));
+      });
+}
+
+SuccesLogin(context) async {
+  return showDialog(
+      context: context,
+      builder: (context) {
+        return Center(
+            child: Material(
+                type: MaterialType.transparency,
+                child: Container(
+                  height: 250.0,
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(15)),
+                  child: ListView(
+                    children: [
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 20, top: 10),
+                        child: Text(
+                          ' ',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: "Open",
+                              fontSize: 16),
+                        ),
+                      ),
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(left: 20, top: 10, right: 20),
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.of(context).pop();
+                          },
+                          child: Column(
+                            children: [
+                              Container(
+                                height: 150,
+                                width: double.infinity,
+                                decoration: new BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: backgroundWhite,
+                                  image: DecorationImage(
+                                    image: NetworkImage(
+                                        'https://i.ibb.co/bvb7zw1/success.gif'),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                              TextButton(
+                                  style: ButtonStyle(
+                                    backgroundColor: MaterialStateProperty
+                                        .resolveWith<Color?>(
+                                      (Set<MaterialState> states) {
+                                        if (states
+                                            .contains(MaterialState.pressed))
+                                          return Theme.of(context)
+                                              .colorScheme
+                                              .primary
+                                              .withOpacity(0.5);
+                                        return successColor; // Use the component's default.
+                                      },
+                                    ),
+                                    overlayColor: MaterialStateProperty
+                                        .resolveWith<Color?>(
+                                            (Set<MaterialState> states) {
+                                      Colors
+                                          .white; // Defer to the widget's default.
+                                    }),
+                                  ),
+                                  onPressed: () {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                OnboardingScreen()));
+                                  },
+                                  child: Text(
+                                    'Vous êtes connecté(e), Continuez',
+                                    style: TextStyle(color: mBackgroundColor),
+                                  )),
                             ],
                           ),
                         ),
