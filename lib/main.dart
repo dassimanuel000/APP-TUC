@@ -257,10 +257,16 @@ class _MyHomePageState extends State<MyHomePage> {
             RoundedButton(
               img: Icons.wifi_tethering_error,
               press: () {
-                _launchURL(
-                    "mailto:jeremywebmaster031@gmail.com?subject=Password forgot ");
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return SignupScreen();
+                    },
+                  ),
+                );
               },
-              text: ' Password forgot ?',
+              text: ' ID forgot ?',
               backgroundColor: mButtonAppleColor,
               textColor: Colors.white,
             ),

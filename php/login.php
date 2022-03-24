@@ -35,7 +35,7 @@ if(isset($user_login) && isset($user_email)){
             $return["success"] = true;
             $return["uid"] = $obj->ID;
             $return["user_email"] = $obj->user_email;
-            $return["user_login"] = $obj->user_email;
+            $return["user_login"] = $obj->user_login;
         }else{
             $return["error"] = true;
             $return["message"] = "Your user_pass is Incorrect.";

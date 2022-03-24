@@ -46,7 +46,7 @@ function sendNotif ($to, $notif){
         echo 'Error:' . curl_error($ch);
 
     }else {
-        echo("<script>console.log('PHP: " . $ch . "');</script>");
+        echo("<script>console.log('PHP: " . json_encode($ch) . "');</script>");
     }
 
     curl_close($ch);
@@ -55,13 +55,13 @@ function sendNotif ($to, $notif){
 
 
 
-$to = "/topics/news";
+$to = "/topics/421";
 
 
 
 $notification = array(
 
-    'title' => "Nouvelle Offres Trouver un candidat !",
+    'title' => "Nouvelle Offres!",
 
     'body' => "A new tournament is ready, Join now or miss out"
 
