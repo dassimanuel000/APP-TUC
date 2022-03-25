@@ -11,16 +11,17 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:http/http.dart' as http;
 
-import 'package:tuc/constants/color.dart';
-import 'package:tuc/screens/index.dart';
-import 'package:tuc/widget/widget.dart';
+import 'package:trouver_un_candidat/constants/color.dart';
+import 'package:trouver_un_candidat/screens/index.dart';
+import 'package:trouver_un_candidat/widget/widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const AndroidNotificationChannel channel = AndroidNotificationChannel(
     'high_importance_channel', // id
     'High Importance Notifications', // title
-    'This channel is used for important notifications.', // description
+    description:
+        'This channel is used for important notifications.', // description
     importance: Importance.high,
     playSound: true);
 
@@ -79,11 +80,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Trouver un candidat',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      debugShowCheckedModeBanner: false,
       home: MyHomePage(title: 'Trouver un candidat'),
     );
   }
@@ -117,7 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
               android: AndroidNotificationDetails(
                 channel.id,
                 channel.name,
-                channel.description,
+                channelDescription: channel.description,
                 color: Colors.blue,
                 playSound: true,
                 icon: '@mipmap/ic_launcher',
@@ -158,8 +159,8 @@ class _MyHomePageState extends State<MyHomePage> {
         "Testing $_counter",
         "This is an Flutter Push Notification",
         NotificationDetails(
-            android: AndroidNotificationDetails(
-                channel.id, channel.name, channel.description,
+            android: AndroidNotificationDetails(channel.id, channel.name,
+                channelDescription: channel.description,
                 importance: Importance.high,
                 color: Colors.blue,
                 playSound: true,

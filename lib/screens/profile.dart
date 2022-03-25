@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sweetalert/sweetalert.dart';
-import 'package:tuc/constants/color.dart';
-import 'package:tuc/main.dart';
-import 'package:tuc/screens/FDrawer.dart';
-import 'package:tuc/widget/widget.dart';
+import 'package:trouver_un_candidat/constants/color.dart';
+import 'package:trouver_un_candidat/main.dart';
+import 'package:trouver_un_candidat/screens/FDrawer.dart';
+import 'package:trouver_un_candidat/widget/widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 late SharedPreferences localStorage;

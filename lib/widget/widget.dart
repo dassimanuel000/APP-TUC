@@ -5,14 +5,14 @@ import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:tuc/constants/color.dart';
-import 'package:tuc/screens/dashboard.dart';
+import 'package:trouver_un_candidat/constants/color.dart';
+import 'package:trouver_un_candidat/screens/dashboard.dart';
 
 import 'package:flutter/services.dart';
 import 'dart:math';
 
 import 'package:provider/provider.dart';
-import 'package:tuc/screens/searchPage.dart';
+import 'package:trouver_un_candidat/screens/searchPage.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../main.dart';

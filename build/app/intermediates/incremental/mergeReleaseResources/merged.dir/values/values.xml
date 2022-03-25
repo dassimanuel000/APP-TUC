@@ -137,7 +137,7 @@
     <string name="firebase_database_url" translatable="false">https://trouver-un-candidat-default-rtdb.firebaseio.com</string>
     <string name="gcm_defaultSenderId" translatable="false">459197970215</string>
     <string name="google_api_key" translatable="false">AIzaSyCakRnoterPEQia_1OIjNdOUIJI244Xqmk</string>
-    <string name="google_app_id" translatable="false">1:459197970215:android:29c099c06cd64affd7db02</string>
+    <string name="google_app_id" translatable="false">1:459197970215:android:082f28eb2f04fd80d7db02</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCakRnoterPEQia_1OIjNdOUIJI244Xqmk</string>
     <string name="google_storage_bucket" translatable="false">trouver-un-candidat.appspot.com</string>
     <string name="project_id" translatable="false">trouver-un-candidat</string>

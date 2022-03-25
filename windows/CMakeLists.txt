@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
-project(tuc LANGUAGES CXX)
+project(trouver_un_candidat LANGUAGES CXX)
 
-set(BINARY_NAME "tuc")
+set(BINARY_NAME "trouver_un_candidat")
 
 cmake_policy(SET CMP0063 NEW)
 

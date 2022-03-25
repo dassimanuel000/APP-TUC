@@ -1,4 +1,4 @@
-name: tuc
+name: trouver_un_candidat
 description: A new Flutter project.
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -25,22 +25,22 @@ dependencies:
   intl: ^0.17.0
 
 
-  flutter_local_notifications: ^6.1.0
-  firebase_core: ^1.4.0
-  firebase_messaging: ^10.0.4
-  firebase_messaging_platform_interface: ^3.1.6
-  firebase_auth: ^3.3.8
-  cloud_firestore: ^3.0.0
+  flutter_local_notifications: ^9.1.4
+  firebase_core: ^1.9.0
+  firebase_messaging: ^11.0.0
+  firebase_messaging_platform_interface: ^3.1.0
+  firebase_auth: ^3.3.0
+  cloud_firestore: ^3.1.0
 
 
 
-  url_launcher: ^6.0.0
+  url_launcher: ^6.0.15
   sweetalert: ^0.0.1
   provider: ^6.0.2
   bottom_nav_bar: ^1.0.3
-  http: ^0.13.2
-  localstore: ^1.1.0
-  shared_preferences: ^2.0.5
+  http: ^0.13.4
+  localstore: ^1.2.1
+  shared_preferences: ^2.0.10
   flutter_rating_bar: ^4.0.0
 
 dev_dependencies:

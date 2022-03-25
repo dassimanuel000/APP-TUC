@@ -86,6 +86,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "dbus",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/dbus-0.7.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
       "name": "fake_async",
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0",
       "packageUri": "lib/",
@@ -141,7 +147,7 @@
     },
     {
       "name": "firebase_messaging",
-      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-10.0.9",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.2.6",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -171,13 +177,19 @@
     },
     {
       "name": "flutter_local_notifications",
-      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications-6.1.1",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications-9.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_local_notifications_linux",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications_linux-0.4.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "flutter_local_notifications_platform_interface",
-      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications_platform_interface-4.0.1",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications_platform_interface-5.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -441,7 +453,7 @@
     },
     {
       "name": "timezone",
-      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/timezone-0.7.0",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/timezone-0.8.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -530,13 +542,13 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "tuc",
+      "name": "trouver_un_candidat",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2022-03-23T12:38:51.758826Z",
+  "generated": "2022-03-24T15:43:28.741525Z",
   "generator": "pub",
   "generatorVersion": "2.16.1"
 }

@@ -2,10 +2,10 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:tuc/constants/color.dart';
-import 'package:tuc/screens/FDrawer.dart';
-import 'package:tuc/screens/searchPage.dart';
-import 'package:tuc/widget/widget.dart';
+import 'package:trouver_un_candidat/constants/color.dart';
+import 'package:trouver_un_candidat/screens/FDrawer.dart';
+import 'package:trouver_un_candidat/screens/searchPage.dart';
+import 'package:trouver_un_candidat/widget/widget.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:url_launcher/url_launcher.dart';
 

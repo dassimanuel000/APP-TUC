@@ -1,0 +1,4 @@
+#Thu Mar 24 17:53:37 CET 2022
+base.0=C\:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

@@ -5,12 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "APP-TUC",
+            "name": "APP-trouver_un_candidat",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "APP-TUC (profile mode)",
+            "name": "APP-trouver_un_candidat (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"

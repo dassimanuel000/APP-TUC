@@ -1,6 +1,6 @@
 <?php
 
-$db = "tuc"; //database name
+$db = "trouver_un_candidat"; //database name
 $dbuser = "root"; //database user_login
 $dbpassword = ""; //database user_pass
 $dbhost = "localhost"; //database host

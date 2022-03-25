@@ -5,14 +5,14 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:tuc/constants/color.dart';
+import 'package:trouver_un_candidat/constants/color.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
-import 'package:tuc/screens/AlerteLIST.dart';
-import 'package:tuc/screens/searchPage.dart';
-import 'package:tuc/widget/widget.dart';
+import 'package:trouver_un_candidat/screens/AlerteLIST.dart';
+import 'package:trouver_un_candidat/screens/searchPage.dart';
+import 'package:trouver_un_candidat/widget/widget.dart';
 
-import 'package:tuc/screens/FDrawer.dart';
+import 'package:trouver_un_candidat/screens/FDrawer.dart';
 
 String uid = '';
 

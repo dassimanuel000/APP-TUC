@@ -3,8 +3,8 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:tuc/constants/color.dart';
-import 'package:tuc/widget/widget.dart';
+import 'package:trouver_un_candidat/constants/color.dart';
+import 'package:trouver_un_candidat/widget/widget.dart';
 import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
 

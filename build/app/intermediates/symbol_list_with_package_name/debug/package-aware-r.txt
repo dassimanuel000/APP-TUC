@@ -1,4 +1,4 @@
-com.example.tuc
+com.trouver_un_candidat.trouver_un_candidat
 attr activityAction
 attr activityName
 attr alpha

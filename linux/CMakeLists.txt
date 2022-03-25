@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 project(runner LANGUAGES CXX)
 
-set(BINARY_NAME "tuc")
-set(APPLICATION_ID "com.example.tuc")
+set(BINARY_NAME "trouver_un_candidat")
+set(APPLICATION_ID "com.trouver_un_candidat.trouver_un_candidat")
 
 cmake_policy(SET CMP0063 NEW)
 

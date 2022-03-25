@@ -2,9 +2,9 @@
 
 import 'package:bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:tuc/screens/dashboard.dart';
-import 'package:tuc/screens/listJob.dart';
-import 'package:tuc/screens/profile.dart';
+import 'package:trouver_un_candidat/screens/dashboard.dart';
+import 'package:trouver_un_candidat/screens/listJob.dart';
+import 'package:trouver_un_candidat/screens/profile.dart';
 
 class RootPage extends StatefulWidget {
   const RootPage({Key? key}) : super(key: key);
