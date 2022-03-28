@@ -229,7 +229,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 );
               },
-              text: ' Get Started ',
+              text: ' Se connecter ',
               backgroundColor: mButtonEmailColor,
               textColor: mBackgroundColor,
             ),
@@ -239,14 +239,8 @@ class _MyHomePageState extends State<MyHomePage> {
             RoundedButton(
               img: Icons.admin_panel_settings_sharp,
               press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return SignupScreen();
-                    },
-                  ),
-                );
+                _launchURL(
+                    "https://trouver-un-candidat.com/me-faire-referencer/");
               },
               text: ' Se Faire Reférencer ',
               backgroundColor: mButtonFacebookColor,
@@ -267,7 +261,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 );
               },
-              text: ' ID forgot ?',
+              text: ' Identifiant oublié ?',
               backgroundColor: mButtonAppleColor,
               textColor: Colors.white,
             ),
@@ -297,7 +291,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     builder: (context) => OnboardingScreen()));
               },
               child: Text(
-                "Skip",
+                "Passer",
                 style: TextStyle(
                     fontFamily: 'Montserrat',
                     color: mButtonAppleColor,
@@ -479,7 +473,7 @@ class SignupScreen extends StatelessWidget {
           Icons.arrow_back_ios_rounded,
           color: mPrimaryTextColor,
           size: 24.0,
-          semanticLabel: 'Back',
+          semanticLabel: 'Passer',
         ),
       ),
     );
@@ -564,14 +558,14 @@ class _LoginPage extends State<LoginPage> {
         } else {
           showprogress = false; //don't show progress indicator
           error = true;
-          errormsg = "Something went wrong.";
+          errormsg = "La demande s'est mal passé.";
         }
       }
     } else {
       setState(() {
         showprogress = false; //don't show progress indicator
         error = true;
-        errormsg = "Error during connecting to server.";
+        errormsg = "Erreur lors de la connexion au serveur.";
       });
     }
   }
@@ -609,10 +603,10 @@ class _LoginPage extends State<LoginPage> {
           Container(
             margin: EdgeInsets.only(top: 80),
             child: Text(
-              "Login trouver Un Candidat",
+              " Trouver Un Candidat",
               style: TextStyle(
                   color: Colors.white,
-                  fontSize: 40,
+                  fontSize: 32,
                   fontWeight: FontWeight.bold),
             ), //title text
           ),
@@ -686,7 +680,7 @@ class _LoginPage extends State<LoginPage> {
                         ),
                       )
                     : Text(
-                        "LOGIN NOW",
+                        "Connexion",
                         style: TextStyle(fontSize: 20),
                       ),
                 // if showprogress == true then show progress indicator
@@ -833,9 +827,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     SizedBox(
                       height: 12.0,
                     ),
-                    Text(
-                      'Recevez des offres qui vous correspondent dans votre localisation',
-                      style: kTitleStyle,
+                    Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Center(
+                        child: Text(
+                          'Recevez des offres qui vous correspondent dans votre localisation',
+                          style: kTitleStyle,
+                        ),
+                      ),
                     ),
                     SizedBox(
                       height: 20,
@@ -846,7 +845,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             builder: (context) => OnboardingScreen()));
                       },
                       child: Text(
-                        'Back',
+                        'Passer',
                         style: kSubtitleStyle,
                       ),
                     ),
@@ -925,7 +924,7 @@ class Slide extends StatelessWidget {
                   .push(MaterialPageRoute(builder: (context) => RootPage()));
             },
             child: Text(
-              "Skip",
+              "Passer",
               style: kSubtitleStyle,
             ),
           ),
@@ -1100,7 +1099,7 @@ Changelanguage(context) async {
                       Padding(
                         padding: const EdgeInsets.only(left: 20, top: 10),
                         child: Text(
-                          'Change language',
+                          'Changer de langue',
                           style: TextStyle(
                               color: Colors.black26,
                               fontWeight: FontWeight.bold,

@@ -2,7 +2,7 @@
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.trouver_un_candidat.trouver_un_candidat"
 4    android:versionCode="1"
-5    android:versionName="1.0.0" >
+5    android:versionName="2.0.1" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="19"
@@ -12,26 +12,26 @@
 12         to allow setting breakpoints, to provide hot reload, etc.
 13    -->
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:43:6-67
-14-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:43:23-65
+14-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:43:6-67
+14-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:43:23-65
 15    <uses-permission android:name="android.permission.WAKE_LOCK" />
-15-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-68
-15-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-65
+15-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-68
+15-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-65
 16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-16-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-79
-16-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:9:22-76
+16-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-79
+16-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:9:22-76
 17    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-17-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-81
-17-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-78
+17-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-81
+17-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-78
 18    <uses-permission android:name="android.permission.VIBRATE" />
-18-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-66
-18-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-63
+18-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-66
+18-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-63
 19    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
-19-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-81
-19-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:9:22-78
+19-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-81
+19-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:9:22-78
 20    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-20-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:10:5-79
-20-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:10:22-76
+20-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:10:5-79
+20-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:10:22-76
 21    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 21-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\07711a27d81d78dc3aa22a7f220af966\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:25:5-82
 21-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\07711a27d81d78dc3aa22a7f220af966\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:25:22-79
@@ -43,31 +43,31 @@
 23-->[com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\88b18b55447fa1c3948b82216a008cb6\jetified-play-services-ads-identifier-18.0.0\AndroidManifest.xml:23:22-76
 24
 25    <application
-25-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:3:4-42:19
+25-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:3:4-42:19
 26        android:name="androidx.multidex.MultiDexApplication"
 27        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 27-->[androidx.core:core:1.6.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\61fe5ccd7a7d9c5c9411b2ffe443464c\core-1.6.0\AndroidManifest.xml:24:18-86
 28        android:debuggable="true"
 29        android:icon="@mipmap/ic_launcher"
-29-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:5:9-43
+29-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:5:9-43
 30        android:label="trouver_un_candidat" >
-30-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:4:9-44
+30-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:4:9-44
 31        <activity
-31-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:6:9-30:20
+31-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:6:9-30:20
 32            android:name="com.trouver_un_candidat.trouver_un_candidat.MainActivity"
-32-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:7:13-41
+32-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:7:13-41
 33            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-33-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:11:13-163
+33-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:11:13-163
 34            android:exported="true"
-34-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:8:13-36
+34-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:8:13-36
 35            android:hardwareAccelerated="true"
-35-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:12:13-47
+35-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:12:13-47
 36            android:launchMode="singleTop"
-36-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:9:13-43
+36-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:9:13-43
 37            android:theme="@style/LaunchTheme"
-37-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:10:13-47
+37-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:10:13-47
 38            android:windowSoftInputMode="adjustResize" >
-38-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:13:13-55
+38-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:13:13-55
 39
 40            <!--
 41                 Specifies an Android theme to apply to this Activity as soon as
@@ -76,41 +76,41 @@
 44                 to determine the Window background behind the Flutter UI.
 45            -->
 46            <intent-filter>
-46-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:18:13-21:29
+46-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:18:13-21:29
 47                <action android:name="android.intent.action.MAIN" />
-47-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:19:17-68
-47-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:19:25-66
+47-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:19:17-68
+47-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:19:25-66
 48
 49                <category android:name="android.intent.category.LAUNCHER" />
-49-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:20:17-76
-49-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:20:27-74
+49-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:20:17-76
+49-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:20:27-74
 50            </intent-filter>
 51
 52            <meta-data
-52-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:22:13-25:17
+52-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:22:13-25:17
 53                android:name="io.flutter.embedding.android.NormalTheme"
-53-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:23:15-70
+53-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:23:15-70
 54                android:resource="@style/NormalTheme" />
-54-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:24:15-52
+54-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:24:15-52
 55            <meta-data
-55-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:26:13-29:19
+55-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:26:13-29:19
 56                android:name="com.google.firebase.messaging.default_notification_icon"
-56-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:27:17-87
+56-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:27:17-87
 57                android:resource="@mipmap/ic_launcher" />
-57-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:28:17-55
+57-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:28:17-55
 58        </activity>
 59
 60        <service
-60-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:31:9-36:19
+60-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:31:9-36:19
 61            android:name="com.trouver_un_candidat.trouver_un_candidat.backgroundService"
-61-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:31:18-94
+61-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:31:18-94
 62            android:exported="true" >
-62-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:32:17-40
+62-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:32:17-40
 63            <intent-filter>
-63-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:33:13-35:29
+63-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:33:13-35:29
 64                <action android:name="com.trouver_un_candidat.trouver_un_candidat.START_BACKGROUND" />
-64-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:34:17-103
-64-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:34:25-100
+64-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:34:17-103
+64-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:34:25-100
 65            </intent-filter>
 66        </service>
 67        <!--
@@ -118,82 +118,82 @@
 69             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
 70        -->
 71        <meta-data
-71-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:39:9-41:33
+71-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:39:9-41:33
 72            android:name="flutterEmbedding"
-72-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:40:13-44
+72-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:40:13-44
 73            android:value="2" />
-73-->C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:41:13-30
+73-->C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:41:13-30
 74
 75        <service
-75-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-15:72
+75-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-15:72
 76            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService"
-76-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-107
+76-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-107
 77            android:exported="false"
-77-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-37
+77-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-37
 78            android:permission="android.permission.BIND_JOB_SERVICE" />
-78-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-69
+78-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-69
 79        <service
-79-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-22:19
+79-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-22:19
 80            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService"
-80-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-97
+80-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-97
 81            android:exported="false" >
-81-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-37
+81-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-37
 82            <intent-filter>
-82-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-21:29
+82-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-21:29
 83                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-83-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:20:17-78
-83-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:20:25-75
+83-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:20:17-78
+83-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:20:25-75
 84            </intent-filter>
 85        </service>
 86
 87        <receiver
-87-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:24:9-31:20
+87-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:24:9-31:20
 88            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver"
-88-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:25:13-98
+88-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:25:13-98
 89            android:exported="true"
-89-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:26:13-36
+89-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:26:13-36
 90            android:permission="com.google.android.c2dm.permission.SEND" >
-90-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:27:13-73
+90-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:27:13-73
 91            <intent-filter>
-91-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-30:29
+91-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-30:29
 92                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-92-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:29:17-81
-92-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:29:25-78
+92-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:29:17-81
+92-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:29:25-78
 93            </intent-filter>
 94        </receiver>
 95
 96        <service
-96-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:33:9-37:19
+96-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:33:9-37:19
 97            android:name="com.google.firebase.components.ComponentDiscoveryService"
-97-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:33:18-89
+97-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:33:18-89
 98            android:directBootAware="true"
 98-->[com.google.firebase:firebase-common:20.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\54331b74c27fe816893ff8124eb72f4e\jetified-firebase-common-20.0.0\AndroidManifest.xml:35:13-43
 99            android:exported="false" >
 99-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\07711a27d81d78dc3aa22a7f220af966\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:51:13-37
 100            <meta-data
-100-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:34:13-36:85
+100-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:34:13-36:85
 101                android:name="com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar"
-101-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:35:17-128
+101-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:35:17-128
 102                android:value="com.google.firebase.components.ComponentRegistrar" />
-102-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:36:17-82
+102-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:36:17-82
 103            <meta-data
-103-->[:firebase_auth] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+103-->[:firebase_auth] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
 104                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
-104-->[:firebase_auth] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
+104-->[:firebase_auth] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
 105                android:value="com.google.firebase.components.ComponentRegistrar" />
-105-->[:firebase_auth] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+105-->[:firebase_auth] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
 106            <meta-data
-106-->[:cloud_firestore] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+106-->[:cloud_firestore] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
 107                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
-107-->[:cloud_firestore] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-134
+107-->[:cloud_firestore] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-134
 108                android:value="com.google.firebase.components.ComponentRegistrar" />
-108-->[:cloud_firestore] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+108-->[:cloud_firestore] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
 109            <meta-data
-109-->[:firebase_core] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+109-->[:firebase_core] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
 110                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-110-->[:firebase_core] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
+110-->[:firebase_core] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
 111                android:value="com.google.firebase.components.ComponentRegistrar" />
-111-->[:firebase_core] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+111-->[:firebase_core] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
 112            <meta-data
 112-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\07711a27d81d78dc3aa22a7f220af966\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:52:13-54:85
 113                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
@@ -233,53 +233,53 @@
 130        </service>
 131
 132        <provider
-132-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:39:9-43:38
+132-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:39:9-43:38
 133            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider"
-133-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:40:13-102
+133-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:40:13-102
 134            android:authorities="com.trouver_un_candidat.trouver_un_candidat.flutterfirebasemessaginginitprovider"
-134-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:41:13-88
+134-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:41:13-88
 135            android:exported="false"
-135-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:42:13-37
+135-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:42:13-37
 136            android:initOrder="99" />
-136-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:43:13-35
+136-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:43:13-35
 137
 138        <receiver
-138-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:13:9-15:40
+138-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:13:9-15:40
 139            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver"
-139-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-97
+139-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-97
 140            android:exported="false" />
-140-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-37
+140-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-37
 141        <receiver
-141-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-25:20
+141-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-25:20
 142            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver"
-142-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-101
+142-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-101
 143            android:exported="false" >
-143-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-37
+143-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-37
 144            <intent-filter>
-144-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-24:29
+144-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-24:29
 145                <action android:name="android.intent.action.BOOT_COMPLETED" />
-145-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:20:17-79
-145-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:20:25-76
+145-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:20:17-79
+145-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:20:25-76
 146                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
-146-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:21:17-84
-146-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:21:25-81
+146-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:21:17-84
+146-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:21:25-81
 147                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-147-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:22:17-82
-147-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:22:25-79
+147-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:22:17-82
+147-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:22:25-79
 148                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
-148-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:23:17-82
-148-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:23:25-79
+148-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:23:17-82
+148-->[:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\debug\AndroidManifest.xml:23:25-79
 149            </intent-filter>
 150        </receiver>
 151
 152        <activity
-152-->[:url_launcher_android] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-11:74
+152-->[:url_launcher_android] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-11:74
 153            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
-153-->[:url_launcher_android] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-74
+153-->[:url_launcher_android] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-74
 154            android:exported="false"
-154-->[:url_launcher_android] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-37
+154-->[:url_launcher_android] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-37
 155            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-155-->[:url_launcher_android] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-71
+155-->[:url_launcher_android] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-71
 156
 157        <receiver
 157-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\07711a27d81d78dc3aa22a7f220af966\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:28:9-35:20
@@ -290,10 +290,10 @@
 160            android:permission="com.google.android.c2dm.permission.SEND" >
 160-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\07711a27d81d78dc3aa22a7f220af966\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:31:13-73
 161            <intent-filter>
-161-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-30:29
+161-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-30:29
 162                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-162-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:29:17-81
-162-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:29:25-78
+162-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:29:17-81
+162-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:29:25-78
 163            </intent-filter>
 164        </receiver>
 165        <!--
@@ -309,10 +309,10 @@
 172            android:exported="false" >
 172-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\07711a27d81d78dc3aa22a7f220af966\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:44:13-37
 173            <intent-filter android:priority="-500" >
-173-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-21:29
+173-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-21:29
 174                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-174-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:20:17-78
-174-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:20:25-75
+174-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:20:17-78
+174-->[:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:20:25-75
 175            </intent-filter>
 176        </service>
 177

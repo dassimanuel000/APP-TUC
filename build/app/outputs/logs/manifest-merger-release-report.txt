@@ -1,17 +1,17 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:1:1-44:12
-INJECTED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:1:1-44:12
-INJECTED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:1:1-44:12
-INJECTED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:1:1-44:12
-MERGED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:2:1-46:12
-MERGED from [:firebase_auth] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:2:1-15:12
-MERGED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:2:1-28:12
-MERGED from [:cloud_firestore] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:2:1-15:12
-MERGED from [:firebase_core] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:2:1-15:12
-MERGED from [:shared_preferences_android] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\shared_preferences_android\intermediates\library_manifest\release\AndroidManifest.xml:2:1-7:12
-MERGED from [:path_provider_android] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\path_provider_android\intermediates\library_manifest\release\AndroidManifest.xml:2:1-7:12
-MERGED from [:url_launcher_android] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\url_launcher_android\intermediates\library_manifest\release\AndroidManifest.xml:2:1-14:12
+ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:1:1-44:12
+INJECTED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:1:1-44:12
+INJECTED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:1:1-44:12
+INJECTED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:1:1-44:12
+MERGED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:2:1-46:12
+MERGED from [:firebase_auth] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:2:1-15:12
+MERGED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:2:1-28:12
+MERGED from [:cloud_firestore] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:2:1-15:12
+MERGED from [:firebase_core] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:2:1-15:12
+MERGED from [:shared_preferences_android] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\shared_preferences_android\intermediates\library_manifest\release\AndroidManifest.xml:2:1-7:12
+MERGED from [:path_provider_android] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\path_provider_android\intermediates\library_manifest\release\AndroidManifest.xml:2:1-7:12
+MERGED from [:url_launcher_android] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\url_launcher_android\intermediates\library_manifest\release\AndroidManifest.xml:2:1-14:12
 MERGED from [com.google.firebase:firebase-analytics:20.1.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\aed9b8f53de9f93b834c27f6c33d4e6c\jetified-firebase-analytics-20.1.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\07711a27d81d78dc3aa22a7f220af966\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:17:1-58:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\655af25f8ae3110b7f068dba32d1d3dd\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
@@ -79,37 +79,37 @@ MERGED from [io.grpc:grpc-android:1.41.0] C:\Users\admin\.gradle\caches\transfor
 MERGED from [com.jakewharton.threetenabp:threetenabp:1.2.3] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\03cff6f196ec5ea19247ec8d8775a907\jetified-threetenabp-1.2.3\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\102ef7a286e5e905be4ad24b311d61b7\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\cb8e0e5ec2a1eaeea5e3a91a201a5bd1\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:1:1-44:12
-INJECTED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:1:1-44:12
-INJECTED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:1:1-44:12
+INJECTED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:1:1-44:12
+INJECTED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:1:1-44:12
+INJECTED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:1:1-44:12
 	package
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:2:5-58
-		INJECTED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:2:5-58
+		INJECTED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:1:1-44:12
-		INJECTED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:1:1-44:12
+		INJECTED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:1:1-44:12
-		INJECTED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:1:1-44:12
+		INJECTED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:1:11-69
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:1:11-69
 application
-ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:3:4-42:19
-MERGED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:11:5-44:19
-MERGED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:11:5-44:19
-MERGED from [:firebase_auth] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_auth] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:7:5-13:19
-MERGED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:12:5-26:19
-MERGED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:12:5-26:19
-MERGED from [:cloud_firestore] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:7:5-13:19
-MERGED from [:cloud_firestore] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_core] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_core] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:7:5-13:19
-MERGED from [:url_launcher_android] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\url_launcher_android\intermediates\library_manifest\release\AndroidManifest.xml:7:5-12:19
-MERGED from [:url_launcher_android] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\url_launcher_android\intermediates\library_manifest\release\AndroidManifest.xml:7:5-12:19
+ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:3:4-42:19
+MERGED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:11:5-44:19
+MERGED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:11:5-44:19
+MERGED from [:firebase_auth] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_auth] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:7:5-13:19
+MERGED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:12:5-26:19
+MERGED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:12:5-26:19
+MERGED from [:cloud_firestore] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:7:5-13:19
+MERGED from [:cloud_firestore] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_core] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_core] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:7:5-13:19
+MERGED from [:url_launcher_android] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\url_launcher_android\intermediates\library_manifest\release\AndroidManifest.xml:7:5-12:19
+MERGED from [:url_launcher_android] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\url_launcher_android\intermediates\library_manifest\release\AndroidManifest.xml:7:5-12:19
 MERGED from [com.google.firebase:firebase-analytics:20.1.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\aed9b8f53de9f93b834c27f6c33d4e6c\jetified-firebase-analytics-20.1.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-analytics:20.1.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\aed9b8f53de9f93b834c27f6c33d4e6c\jetified-firebase-analytics-20.1.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\07711a27d81d78dc3aa22a7f220af966\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:27:5-56:19
@@ -169,69 +169,69 @@ MERGED from [com.jakewharton.threetenabp:threetenabp:1.2.3] C:\Users\admin\.grad
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.6.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\61fe5ccd7a7d9c5c9411b2ffe443464c\core-1.6.0\AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:4:9-44
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:4:9-44
 	android:icon
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:5:9-43
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:5:9-43
 activity#com.trouver_un_candidat.trouver_un_candidat.MainActivity
-ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:6:9-30:20
+ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:6:9-30:20
 	android:launchMode
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:9:13-43
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:9:13-43
 	android:hardwareAccelerated
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:12:13-47
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:12:13-47
 	android:windowSoftInputMode
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:13:13-55
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:13:13-55
 	android:exported
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:8:13-36
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:8:13-36
 	android:configChanges
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:11:13-163
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:11:13-163
 	android:theme
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:10:13-47
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:10:13-47
 	android:name
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:7:13-41
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:7:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:18:13-21:29
+ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:18:13-21:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:19:17-68
+ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:19:17-68
 	android:name
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:19:25-66
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:19:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:20:17-76
+ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:20:17-76
 	android:name
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:20:27-74
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:20:27-74
 meta-data#io.flutter.embedding.android.NormalTheme
-ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:22:13-25:17
+ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:22:13-25:17
 	android:resource
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:24:15-52
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:24:15-52
 	android:name
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:23:15-70
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:23:15-70
 meta-data#com.google.firebase.messaging.default_notification_icon
-ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:26:13-29:19
+ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:26:13-29:19
 	android:resource
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:28:17-55
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:28:17-55
 	android:name
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:27:17-87
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:27:17-87
 service#com.trouver_un_candidat.trouver_un_candidat.backgroundService
-ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:31:9-36:19
+ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:31:9-36:19
 	android:exported
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:32:17-40
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:32:17-40
 	android:name
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:31:18-94
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:31:18-94
 intent-filter#action:name:com.trouver_un_candidat.trouver_un_candidat.START_BACKGROUND
-ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:33:13-35:29
+ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:33:13-35:29
 action#com.trouver_un_candidat.trouver_un_candidat.START_BACKGROUND
-ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:34:17-103
+ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:34:17-103
 	android:name
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:34:25-100
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:34:25-100
 meta-data#flutterEmbedding
-ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:39:9-41:33
+ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:39:9-41:33
 	android:value
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:41:13-30
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:41:13-30
 	android:name
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:40:13-44
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:40:13-44
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:43:6-67
-MERGED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:7:5-67
-MERGED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:7:5-67
+ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:43:6-67
+MERGED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:7:5-67
+MERGED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:7:5-67
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\e8294ca460e6736de6c16705fc406b53\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:26:5-67
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\e8294ca460e6736de6c16705fc406b53\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\9ee89caca6dddef28e7e7af9663b4b83\jetified-firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
@@ -251,27 +251,27 @@ MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.0] C:\Use
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\16016cf1e3cddd0f6d1bd07467ccd5b9\jetified-play-services-measurement-sdk-api-20.1.0\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\16016cf1e3cddd0f6d1bd07467ccd5b9\jetified-play-services-measurement-sdk-api-20.1.0\AndroidManifest.xml:23:5-67
 	android:name
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml:43:23-65
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml:43:23-65
 uses-sdk
-INJECTED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml
-MERGED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
-MERGED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
-MERGED from [:firebase_auth] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
-MERGED from [:firebase_auth] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
-MERGED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
-MERGED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
-MERGED from [:cloud_firestore] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
-MERGED from [:cloud_firestore] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
-MERGED from [:firebase_core] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
-MERGED from [:firebase_core] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
-MERGED from [:shared_preferences_android] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\shared_preferences_android\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
-MERGED from [:shared_preferences_android] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\shared_preferences_android\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
-MERGED from [:path_provider_android] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\path_provider_android\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
-MERGED from [:path_provider_android] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\path_provider_android\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
-MERGED from [:url_launcher_android] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\url_launcher_android\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
-MERGED from [:url_launcher_android] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\url_launcher_android\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+INJECTED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml
+MERGED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences_android] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\shared_preferences_android\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences_android] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\shared_preferences_android\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:path_provider_android] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\path_provider_android\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:path_provider_android] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\path_provider_android\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:url_launcher_android] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\url_launcher_android\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:url_launcher_android] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\url_launcher_android\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics:20.1.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\aed9b8f53de9f93b834c27f6c33d4e6c\jetified-firebase-analytics-20.1.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics:20.1.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\aed9b8f53de9f93b834c27f6c33d4e6c\jetified-firebase-analytics-20.1.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\07711a27d81d78dc3aa22a7f220af966\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:20:5-44
@@ -406,18 +406,18 @@ MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\adm
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\102ef7a286e5e905be4ad24b311d61b7\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\cb8e0e5ec2a1eaeea5e3a91a201a5bd1\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\cb8e0e5ec2a1eaeea5e3a91a201a5bd1\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
-INJECTED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\android\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:8:5-68
+ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:8:5-68
 MERGED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\07711a27d81d78dc3aa22a7f220af966\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:23:5-68
 MERGED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\07711a27d81d78dc3aa22a7f220af966\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:23:5-68
 MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\387c877cc772048a9b0adc929a9dca29\jetified-play-services-measurement-api-20.1.0\AndroidManifest.xml:24:5-68
@@ -431,9 +431,9 @@ MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.0] C:\Use
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\16016cf1e3cddd0f6d1bd07467ccd5b9\jetified-play-services-measurement-sdk-api-20.1.0\AndroidManifest.xml:25:5-68
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\16016cf1e3cddd0f6d1bd07467ccd5b9\jetified-play-services-measurement-sdk-api-20.1.0\AndroidManifest.xml:25:5-68
 	android:name
-		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:8:22-65
+		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:8:22-65
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:9:5-79
+ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:9:5-79
 MERGED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\07711a27d81d78dc3aa22a7f220af966\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:22:5-79
 MERGED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\07711a27d81d78dc3aa22a7f220af966\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:22:5-79
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\e8294ca460e6736de6c16705fc406b53\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:25:5-79
@@ -459,49 +459,49 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] C:
 MERGED from [io.grpc:grpc-android:1.41.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\440ef86828f488d3e93681c98d829941\jetified-grpc-android-1.41.0\AndroidManifest.xml:11:5-79
 MERGED from [io.grpc:grpc-android:1.41.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\440ef86828f488d3e93681c98d829941\jetified-grpc-android-1.41.0\AndroidManifest.xml:11:5-79
 	android:name
-		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:9:22-76
+		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:9:22-76
 service#io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService
-ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:12:9-15:72
+ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:12:9-15:72
 	android:exported
-		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:14:13-37
+		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:14:13-37
 	android:permission
-		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:15:13-69
+		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:15:13-69
 	android:name
-		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:13:13-107
+		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:13:13-107
 service#io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService
-ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:16:9-22:19
+ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:16:9-22:19
 	android:exported
-		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:18:13-37
+		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:18:13-37
 	android:name
-		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:17:13-97
+		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:17:13-97
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:19:13-21:29
+ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:19:13-21:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:20:17-78
+ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:20:17-78
 	android:name
-		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:20:25-75
+		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:20:25-75
 receiver#io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver
-ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:24:9-31:20
+ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:24:9-31:20
 	android:exported
-		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:26:13-36
+		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:26:13-36
 	android:permission
-		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:27:13-73
+		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:27:13-73
 	android:name
-		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:25:13-98
+		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:25:13-98
 intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
-ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:28:13-30:29
+ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:28:13-30:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:29:17-81
+ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:29:17-81
 	android:name
-		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:29:25-78
+		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:29:25-78
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:33:9-37:19
-MERGED from [:firebase_auth] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_auth] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:8:9-12:19
-MERGED from [:cloud_firestore] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:8:9-12:19
-MERGED from [:cloud_firestore] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_core] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_core] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:8:9-12:19
+ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:33:9-37:19
+MERGED from [:firebase_auth] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_auth] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:8:9-12:19
+MERGED from [:cloud_firestore] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:8:9-12:19
+MERGED from [:cloud_firestore] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_core] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_core] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:8:9-12:19
 MERGED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\07711a27d81d78dc3aa22a7f220af966\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:49:9-55:19
 MERGED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\07711a27d81d78dc3aa22a7f220af966\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:49:9-55:19
 MERGED from [com.google.firebase:firebase-datatransport:18.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\dc434f3bf3de5c785ff58410446fb78c\jetified-firebase-datatransport-18.0.0\AndroidManifest.xml:25:9-31:19
@@ -523,95 +523,95 @@ MERGED from [com.google.firebase:firebase-common:20.0.0] C:\Users\admin\.gradle\
 	android:directBootAware
 		ADDED from [com.google.firebase:firebase-common:20.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\54331b74c27fe816893ff8124eb72f4e\jetified-firebase-common-20.0.0\AndroidManifest.xml:35:13-43
 	android:name
-		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:33:18-89
+		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:33:18-89
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar
-ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:34:13-36:85
+ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:34:13-36:85
 	android:value
-		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:36:17-82
+		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:36:17-82
 	android:name
-		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:35:17-128
+		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:35:17-128
 provider#io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider
-ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:39:9-43:38
+ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:39:9-43:38
 	android:authorities
-		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:41:13-88
+		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:41:13-88
 	android:exported
-		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:42:13-37
+		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:42:13-37
 	android:initOrder
-		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:43:13-35
+		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:43:13-35
 	android:name
-		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:40:13-102
+		ADDED from [:firebase_messaging] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_messaging\intermediates\library_manifest\release\AndroidManifest.xml:40:13-102
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar
-ADDED from [:firebase_auth] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:9:13-11:85
+ADDED from [:firebase_auth] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:9:13-11:85
 	android:value
-		ADDED from [:firebase_auth] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:11:17-82
+		ADDED from [:firebase_auth] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:11:17-82
 	android:name
-		ADDED from [:firebase_auth] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:10:17-124
+		ADDED from [:firebase_auth] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_auth\intermediates\library_manifest\release\AndroidManifest.xml:10:17-124
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:7:5-81
+ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:7:5-81
 	android:name
-		ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:7:22-78
+		ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:7:22-78
 uses-permission#android.permission.VIBRATE
-ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:8:5-66
+ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:8:5-66
 	android:name
-		ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:8:22-63
+		ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:8:22-63
 uses-permission#android.permission.USE_FULL_SCREEN_INTENT
-ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:9:5-81
+ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:9:5-81
 	android:name
-		ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:9:22-78
+		ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:9:22-78
 uses-permission#android.permission.SCHEDULE_EXACT_ALARM
-ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:10:5-79
+ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:10:5-79
 	android:name
-		ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:10:22-76
+		ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:10:22-76
 receiver#com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver
-ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:13:9-15:40
+ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:13:9-15:40
 	android:exported
-		ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:15:13-37
+		ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:15:13-37
 	android:name
-		ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:14:13-97
+		ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:14:13-97
 receiver#com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver
-ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:16:9-25:20
+ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:16:9-25:20
 	android:exported
-		ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:18:13-37
+		ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:18:13-37
 	android:name
-		ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:17:13-101
+		ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:17:13-101
 intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.MY_PACKAGE_REPLACED+action:name:android.intent.action.QUICKBOOT_POWERON+action:name:com.htc.intent.action.QUICKBOOT_POWERON
-ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:19:13-24:29
+ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:19:13-24:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:20:17-79
+ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:20:17-79
 	android:name
-		ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:20:25-76
+		ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:20:25-76
 action#android.intent.action.MY_PACKAGE_REPLACED
-ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:21:17-84
+ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:21:17-84
 	android:name
-		ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:21:25-81
+		ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:21:25-81
 action#android.intent.action.QUICKBOOT_POWERON
-ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:22:17-82
+ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:22:17-82
 	android:name
-		ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:22:25-79
+		ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:22:25-79
 action#com.htc.intent.action.QUICKBOOT_POWERON
-ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:23:17-82
+ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:23:17-82
 	android:name
-		ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:23:25-79
+		ADDED from [:flutter_local_notifications] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\flutter_local_notifications\intermediates\library_manifest\release\AndroidManifest.xml:23:25-79
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar
-ADDED from [:cloud_firestore] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:9:13-11:85
+ADDED from [:cloud_firestore] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:9:13-11:85
 	android:value
-		ADDED from [:cloud_firestore] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:11:17-82
+		ADDED from [:cloud_firestore] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:11:17-82
 	android:name
-		ADDED from [:cloud_firestore] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:10:17-134
+		ADDED from [:cloud_firestore] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\cloud_firestore\intermediates\library_manifest\release\AndroidManifest.xml:10:17-134
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar
-ADDED from [:firebase_core] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:9:13-11:85
+ADDED from [:firebase_core] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:9:13-11:85
 	android:value
-		ADDED from [:firebase_core] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:11:17-82
+		ADDED from [:firebase_core] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:11:17-82
 	android:name
-		ADDED from [:firebase_core] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:10:17-124
+		ADDED from [:firebase_core] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\firebase_core\intermediates\library_manifest\release\AndroidManifest.xml:10:17-124
 activity#io.flutter.plugins.urllauncher.WebViewActivity
-ADDED from [:url_launcher_android] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\url_launcher_android\intermediates\library_manifest\release\AndroidManifest.xml:8:9-11:74
+ADDED from [:url_launcher_android] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\url_launcher_android\intermediates\library_manifest\release\AndroidManifest.xml:8:9-11:74
 	android:exported
-		ADDED from [:url_launcher_android] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\url_launcher_android\intermediates\library_manifest\release\AndroidManifest.xml:10:13-37
+		ADDED from [:url_launcher_android] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\url_launcher_android\intermediates\library_manifest\release\AndroidManifest.xml:10:13-37
 	android:theme
-		ADDED from [:url_launcher_android] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\url_launcher_android\intermediates\library_manifest\release\AndroidManifest.xml:11:13-71
+		ADDED from [:url_launcher_android] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\url_launcher_android\intermediates\library_manifest\release\AndroidManifest.xml:11:13-71
 	android:name
-		ADDED from [:url_launcher_android] C:\Users\admin\Documents\DEV TEST MANUEL\App mobile\new\APP-TUC\build\url_launcher_android\intermediates\library_manifest\release\AndroidManifest.xml:9:13-74
+		ADDED from [:url_launcher_android] C:\Users\admin\Documents\DEV TEST\App_mobile\APP-TUC\build\url_launcher_android\intermediates\library_manifest\release\AndroidManifest.xml:9:13-74
 uses-permission#com.google.android.c2dm.permission.RECEIVE
 ADDED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\07711a27d81d78dc3aa22a7f220af966\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:25:5-82
 MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\7221e37809bd20afa0629ceadcdee444\jetified-play-services-cloud-messaging-17.0.0\AndroidManifest.xml:11:5-82

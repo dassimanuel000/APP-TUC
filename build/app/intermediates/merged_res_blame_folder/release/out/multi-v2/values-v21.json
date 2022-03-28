@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\build\\app\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v21\\values-v21.xml",
+            "outputFile": "C:\\Users\\admin\\Documents\\DEV TEST\\App_mobile\\APP-TUC\\build\\app\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
                     "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-2\\files-2.1\\72525e0497a4f5e08288ca2a1760af60\\media-1.1.0\\res\\values-v21\\values-v21.xml",

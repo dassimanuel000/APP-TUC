@@ -102,7 +102,7 @@ class _DashboardState extends State<Dashboard> {
               child: TextField(
                 controller: keyword, //set user_pass controller
                 decoration: InputDecoration(
-                  hintText: 'Search..',
+                  hintText: 'Rechercher ...',
                   border: InputBorder.none,
                   isDense: true,
                   contentPadding: EdgeInsets.all(0),

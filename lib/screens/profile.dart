@@ -180,7 +180,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 child: Padding(
                                   padding: EdgeInsets.only(left: 5, top: 5),
                                   child: Text(
-                                    'Account',
+                                    'Compte en ligne',
                                     style: TextStyle(
                                       fontFamily: 'Montserrat',
                                       fontSize: 18.0,
@@ -333,7 +333,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 child: Padding(
                                   padding: EdgeInsets.only(left: 5, top: 5),
                                   child: Text(
-                                    "Articles D'emplois",
+                                    "Articles  ",
                                     style: TextStyle(
                                       fontFamily: 'Montserrat',
                                       fontSize: 16.0,
@@ -379,8 +379,8 @@ class _ProfilePageState extends State<ProfilePage> {
                         onTap: () {
                           SweetAlert.show(
                             context,
-                            title: "RECHARGER LES OFFRES",
-                            subtitle: "Vous pouvez voir les Offres",
+                            title: "	Déconnexion ",
+                            subtitle: "Vous pouvez vous connecter",
                             style: SweetAlertStyle.success,
                             showCancelButton: false,
                             onPress: doesntReturn(),
@@ -407,8 +407,8 @@ class _ProfilePageState extends State<ProfilePage> {
                               Padding(
                                 padding: EdgeInsets.only(left: 5, top: 5),
                                 child: IconButton(
-                                    icon: Icon(Icons.near_me,
-                                        color: Colors.purpleAccent),
+                                    icon:
+                                        Icon(Icons.near_me, color: Colors.red),
                                     onPressed: () {}),
                               ),
                               Container(
@@ -416,7 +416,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 child: Padding(
                                   padding: EdgeInsets.only(left: 5, top: 5),
                                   child: Text(
-                                    'Actualiser les offres',
+                                    '	Déconnexion ',
                                     style: TextStyle(
                                       fontFamily: 'Montserrat',
                                       fontSize: 18.0,
@@ -508,7 +508,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 child: Padding(
                                   padding: EdgeInsets.only(left: 5, top: 5),
                                   child: Text(
-                                    'About & help',
+                                    'Contacts & A propos',
                                     style: TextStyle(
                                       fontFamily: 'Roboto',
                                       fontSize: 18.0,

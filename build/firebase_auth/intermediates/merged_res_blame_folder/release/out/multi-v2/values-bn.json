@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\build\\firebase_auth\\intermediates\\res\\merged\\release\\values-bn\\values-bn.xml",
+            "outputFile": "C:\\Users\\admin\\Documents\\DEV TEST\\App_mobile\\APP-TUC\\build\\firebase_auth\\intermediates\\res\\merged\\release\\values-bn\\values-bn.xml",
             "map": [
                 {
                     "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-2\\files-2.1\\944e11175bce026a52920c50fecc2146\\jetified-play-services-base-17.1.0\\res\\values-bn\\values.xml",
@@ -57,7 +57,7 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\build\\firebase_auth\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-bn\\values-bn.xml",
+            "outputFile": "C:\\Users\\admin\\Documents\\DEV TEST\\App_mobile\\APP-TUC\\build\\firebase_auth\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-bn\\values-bn.xml",
             "map": [
                 {
                     "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-2\\files-2.1\\944e11175bce026a52920c50fecc2146\\jetified-play-services-base-17.1.0\\res\\values-bn\\values.xml",

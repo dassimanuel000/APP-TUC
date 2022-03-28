@@ -26678,5 +26678,5 @@ com.google.android.gms.internal.measurement.zzfq:
     static synthetic void zzc(com.google.android.gms.internal.measurement.zzfq,java.lang.String)
     static synthetic void zzd(com.google.android.gms.internal.measurement.zzfq,long)
 org.threeten.bp.chrono.ChronoLocalDate$1
-io.flutter.plugin.common.BinaryMessenger$-CC
 io.flutter.plugin.platform.PlatformView$-CC
+io.flutter.plugin.common.BinaryMessenger$-CC

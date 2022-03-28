@@ -9,7 +9,7 @@ import 'package:url_launcher/url_launcher.dart';
 int _counter = 0;
 
 Widget callcount(context, int count) {
-  return Text("Offres : " + "${count}");
+  return Text("");
 }
 
 class Search extends StatefulWidget {

@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\build\\app\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\admin\\Documents\\DEV TEST\\App_mobile\\APP-TUC\\build\\app\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\build\\app\\generated\\res\\google-services\\release\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,326,408,512,621,741,844",
-                        "endColumns": "143,126,81,103,108,119,102,79",
-                        "endOffsets": "194,321,403,507,616,736,839,919"
-                    },
-                    "to": {
-                        "startLines": "134,136,137,138,139,140,141,142",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "9471,9697,9824,9906,10010,10119,10239,10342",
-                        "endColumns": "143,126,81,103,108,119,102,79",
-                        "endOffsets": "9610,9819,9901,10005,10114,10234,10337,10417"
-                    }
-                },
                 {
                     "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-2\\files-2.1\\4b305cfda872b95132f3af5601ff6d0a\\coordinatorlayout-1.0.0\\res\\values\\values.xml",
                     "from": {
@@ -95,7 +78,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\admin\\Documents\\DEV TEST MANUEL\\App mobile\\new\\APP-TUC\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "C:\\Users\\admin\\Documents\\DEV TEST\\App_mobile\\APP-TUC\\android\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
@@ -181,6 +164,23 @@
                         "startOffsets": "1774,1863,1934,3616,3669,3722,3775,6940,11277,11453,11575,11837,12032",
                         "endColumns": "88,70,72,52,52,52,52,59,65,121,60,65,66",
                         "endOffsets": "1858,1929,2002,3664,3717,3770,3823,6995,11338,11570,11631,11898,12094"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\admin\\Documents\\DEV TEST\\App_mobile\\APP-TUC\\build\\app\\generated\\res\\google-services\\release\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,199,326,408,512,621,741,844",
+                        "endColumns": "143,126,81,103,108,119,102,79",
+                        "endOffsets": "194,321,403,507,616,736,839,919"
+                    },
+                    "to": {
+                        "startLines": "134,136,137,138,139,140,141,142",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "9471,9697,9824,9906,10010,10119,10239,10342",
+                        "endColumns": "143,126,81,103,108,119,102,79",
+                        "endOffsets": "9610,9819,9901,10005,10114,10234,10337,10417"
                     }
                 }
             ]

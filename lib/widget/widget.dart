@@ -116,25 +116,16 @@ class HaveAccount extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => LoginPage()));
-      },
-      child: Center(
-        child: RichText(
-          text: TextSpan(
-              style: TextStyle(
-                color: mPrimaryTextColor,
-              ),
-              children: [
-                TextSpan(text: 'Already have an account?'),
-                TextSpan(
-                  text: ' Log in',
-                  style: TextStyle(color: mPrimaryColor),
-                ),
-              ]),
-        ),
+    return Center(
+      child: RichText(
+        text: TextSpan(
+            style: TextStyle(
+              color: mPrimaryTextColor,
+            ),
+            children: [
+              TextSpan(
+                  text: '© 2022 trouver-un-candidat. Tous droits réservés.'),
+            ]),
       ),
     );
   }
@@ -157,7 +148,7 @@ AppBar navigatorpop(BuildContext context) {
       child: TextField(
         controller: keyword, //set user_pass controller
         decoration: InputDecoration(
-          hintText: 'Search..',
+          hintText: 'Rechercher ...',
           border: InputBorder.none,
           isDense: true,
           contentPadding: EdgeInsets.all(0),

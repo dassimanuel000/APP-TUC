@@ -73,7 +73,7 @@ class _MyDrawerState extends State<MyDrawer> with TickerProviderStateMixin {
             ),
           ),
           ListTile(
-            title: Text("Profils"),
+            title: Text("Profiles"),
             trailing: Icon(
               Icons.arrow_forward_ios,
               color: mButtonFacebookColor,
@@ -86,7 +86,7 @@ class _MyDrawerState extends State<MyDrawer> with TickerProviderStateMixin {
           ),
           Divider(),
           ListTile(
-            title: Text("Website"),
+            title: Text("Site Web"),
             trailing: Icon(
               Icons.ondemand_video,
               color: mButtonFacebookColor,
@@ -98,7 +98,7 @@ class _MyDrawerState extends State<MyDrawer> with TickerProviderStateMixin {
           ),
           Divider(),
           ListTile(
-            title: Text("I Need Help"),
+            title: Text("Tutoriels Youtube"),
             trailing: Icon(
               Icons.collections,
               color: mButtonFacebookColor,
@@ -111,7 +111,7 @@ class _MyDrawerState extends State<MyDrawer> with TickerProviderStateMixin {
           ),
           Divider(),
           ListTile(
-            title: Text("Close"),
+            title: Text("Fermez"),
             trailing: Icon(
               Icons.close,
               color: Colors.red.shade300,
