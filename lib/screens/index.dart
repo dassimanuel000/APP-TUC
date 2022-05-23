@@ -55,8 +55,8 @@ class _RootPageState extends State<RootPage> {
             activeBackgroundColor: Colors.blue.shade300,
           ),
           BottomNavBarItem(
-            title: 'Profiles',
-            icon: const Icon(Icons.person_outlined),
+            title: 'Articles',
+            icon: const Icon(Icons.bookmark_add_sharp),
             activeColor: Colors.white,
             inactiveColor: Colors.black,
             activeBackgroundColor: Colors.red.shade300,
@@ -66,7 +66,7 @@ class _RootPageState extends State<RootPage> {
             icon: const Icon(Icons.settings_outlined),
             inactiveColor: Colors.black,
             activeColor: Colors.white,
-            activeBackgroundColor: Colors.green.shade300,
+            activeBackgroundColor: Colors.blue.shade300,
           ),
         ],
       );

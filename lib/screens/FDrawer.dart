@@ -73,15 +73,14 @@ class _MyDrawerState extends State<MyDrawer> with TickerProviderStateMixin {
             ),
           ),
           ListTile(
-            title: Text("Profiles"),
+            title: Text("Offfres"),
             trailing: Icon(
               Icons.arrow_forward_ios,
               color: mButtonFacebookColor,
             ),
             onLongPress: () {},
             onTap: () {
-              _launchURL(
-                  "https://trouver-un-candidat.com/candidat/${user_login}");
+              _launchURL("https://trouver-un-candidat.com/liste-des-offres");
             },
           ),
           Divider(),
@@ -111,7 +110,7 @@ class _MyDrawerState extends State<MyDrawer> with TickerProviderStateMixin {
           ),
           Divider(),
           ListTile(
-            title: Text("Fermez"),
+            title: Text("Fermer"),
             trailing: Icon(
               Icons.close,
               color: Colors.red.shade300,

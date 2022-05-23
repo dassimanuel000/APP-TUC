@@ -180,7 +180,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 child: Padding(
                                   padding: EdgeInsets.only(left: 5, top: 5),
                                   child: Text(
-                                    'Compte en ligne',
+                                    'Offres en ligne',
                                     style: TextStyle(
                                       fontFamily: 'Montserrat',
                                       fontSize: 18.0,
@@ -508,7 +508,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 child: Padding(
                                   padding: EdgeInsets.only(left: 5, top: 5),
                                   child: Text(
-                                    'Contacts & A propos',
+                                    'Contacts ',
                                     style: TextStyle(
                                       fontFamily: 'Roboto',
                                       fontSize: 18.0,
@@ -563,7 +563,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               padding: EdgeInsets.all(10.0),
                               child: Center(
                                 child: Text(
-                                  '© 2022 trouver-un-candidat. Tous droits réservés.',
+                                  '© 2022 Trouver Un Candidat. Tous droits réservés.',
                                   style: TextStyle(
                                     fontFamily: 'Roboto',
                                     fontSize: 12.0,

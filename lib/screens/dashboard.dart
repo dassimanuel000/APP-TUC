@@ -57,7 +57,7 @@ class _DashboardState extends State<Dashboard> {
           SizedBox(
             height: 1.0,
           ),
-          tile("Alertes Emploi"),
+          tile("Mes Alertes "),
           SizedBox(
             height: 1.0,
           ),
@@ -65,7 +65,7 @@ class _DashboardState extends State<Dashboard> {
               margin: EdgeInsets.only(bottom: 5),
               child: Container(
                 padding: EdgeInsets.all(15.0),
-                height: MediaQuery.of(context).size.width / 2,
+                height: MediaQuery.of(context).size.width * 0.8,
                 child: new View(),
               )),
           SizedBox(
@@ -148,7 +148,7 @@ class _DashboardState extends State<Dashboard> {
   Widget tile(String title) {
     return Container(
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(15.0),
         child: Text(
           "${title}",
           style: kTitleStyle,
@@ -302,8 +302,8 @@ class View extends StatelessWidget {
                       backgroundColor: Colors.white,
                     ),
                     title: Text("${list[index]['title_filtre ']}"),
-                    subtitle: Text(
-                        "Créée  le : " + "${list[index]['post_modified']}"),
+                    subtitle:
+                        Text("Crée  le : " + "${list[index]['post_modified']}"),
                     trailing: Icon(Icons.arrow_forward_ios_rounded),
                   );
                 })

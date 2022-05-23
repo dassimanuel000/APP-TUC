@@ -351,7 +351,6 @@ class SignupScreen extends StatelessWidget {
           divider(),
           colorTiles(),
           divider(),
-          bwTiles(),
         ],
       ),
       // floatingActionButton: fab(),
@@ -595,7 +594,7 @@ class _LoginPage extends State<LoginPage> {
         width: MediaQuery.of(context).size.width,
         //make width of outer wrapper to 100%
         decoration: BoxDecoration(
-          color: Colors.lightBlue,
+          color: tuc,
         ), //show linear gradient background of page
 
         padding: EdgeInsets.all(20),
@@ -613,7 +612,7 @@ class _LoginPage extends State<LoginPage> {
           Container(
             margin: EdgeInsets.only(top: 10),
             child: Text(
-              "Se Connecter avec votre identifiant et votre mail",
+              "Se Connecter avec votre identifiant et votre mail.",
               style: TextStyle(color: Colors.white, fontSize: 15),
             ), //subtitle text
           ),
@@ -630,7 +629,7 @@ class _LoginPage extends State<LoginPage> {
             margin: EdgeInsets.only(top: 10),
             child: TextField(
               controller: _username, //set user_login controller
-              style: TextStyle(color: Colors.blue[100], fontSize: 20),
+              style: TextStyle(color: Colors.black54, fontSize: 20),
               decoration: myInputDecoration(
                 label: "Email",
                 icon: Icons.person,
@@ -645,7 +644,7 @@ class _LoginPage extends State<LoginPage> {
             padding: EdgeInsets.all(10),
             child: TextField(
               controller: _password, //set user_pass controller
-              style: TextStyle(color: Colors.blue[100], fontSize: 20),
+              style: TextStyle(color: Colors.black54, fontSize: 20),
               obscureText: false,
               decoration: myInputDecoration(
                   label: "Identifiant", icon: Icons.security_outlined),
@@ -702,7 +701,7 @@ class _LoginPage extends State<LoginPage> {
                   findID(context);
                 },
                 child: Text(
-                  "Où trouver son identifiant et son mail ?",
+                  "Où trouver son identifiant et son Email ?",
                   style: TextStyle(color: Colors.white, fontSize: 18),
                 )),
           )
@@ -790,7 +789,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     width: 340,
                   ),
                   title: "Recrutement de proximité",
-                  subtitle: "Trouvez le candidat qui vous correspond",
+                  subtitle: "Trouvez le candidat qui vous correspond.",
                   onNext: nextPage),
               Slide(
                   hero: Image.asset(
@@ -799,8 +798,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     width: 340,
                   ),
                   title: "Explorez des milliers d'offres",
-                  subtitle:
-                      "Comment trouver l'offre qui correspond à vos attentes ? ",
+                  subtitle: "Trouver l'offre qui correspond à vos attentes . ",
                   onNext: nextPage),
               Slide(
                   hero: Image.asset(
@@ -810,7 +808,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                   title: "Se Faire Référencer",
                   subtitle:
-                      "Bénéficiez de la meilleure visibilité en ligne grâce à un référencement naturel ",
+                      "Bénéficiez de la meilleure visibilité en ligne grâce à un référencement naturel .",
                   onNext: nextPage),
               Scaffold(
                 backgroundColor: Colors.white,
@@ -828,10 +826,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       height: 12.0,
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(15.0),
+                      padding: const EdgeInsets.all(25.0),
                       child: Center(
                         child: Text(
-                          'Recevez des offres qui vous correspondent dans votre localisation',
+                          'Recevez des offres qui vous correspondent dans votre localisation.',
                           style: kTitleStyle,
                         ),
                       ),
@@ -1162,7 +1160,7 @@ findID(context) async {
                       Padding(
                         padding: const EdgeInsets.only(left: 20, top: 10),
                         child: Text(
-                          'Votre boîte Mail',
+                          'Regardez dans Votre boîte Mail',
                           style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
@@ -1182,7 +1180,7 @@ findID(context) async {
                               Padding(
                                 padding: const EdgeInsets.all(12.0),
                                 child: Text(
-                                  "Après votre bilan de compétence et votre inscription sur la plateforme Trouver un candidat, Vous avez reçu un mail avec votre Identifiant ( Utilisez l'adresse mail sur laquelle vous avez reçu le mail d'inscription )",
+                                  "Après la création de votre profil Candidat sur la plateforme Trouver un candidat, Vous avez reçu un Email avec votre Identifiant.\nl'Email est celui avec lequel vous avez reçu la confirmation.",
                                   style: TextStyle(
                                       color: mPrimaryTextColor,
                                       fontWeight: FontWeight.normal,

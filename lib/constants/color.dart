@@ -2,6 +2,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
+Color tuc = Color(0xFF195ec5);
 Color mPrimaryColor = Color(0xFFFF7660);
 
 Color mPrimaryTextColor = Color(0xFF303030);
