@@ -1,6 +1,7 @@
 
 # Internal Collaborator Listing & Job Alerts Mobile App
 
+[ockup-2.png](./Mockup-2.png)
 ## Description
 
 This mobile application is designed for internal collaborators of a company to stay informed about articles and job offers from partner companies. The app provides real-time alerts and a dynamic interface that enhances user interaction. It allows employees to view, search, and save job offers and articles from partners in a user-friendly environment.
